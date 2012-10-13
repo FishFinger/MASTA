@@ -10,7 +10,7 @@ Liste des tâches possibles :
 Paléolithique
     - chasseur
     - cueilleur 
-    - bûcheron 
+    - récolteur de bois
     - constructeur (cabane)
 
 Mésolithique
@@ -21,6 +21,7 @@ Mésolithique
 Néolithique 
     - agriculteur
     - éleveur
+    - bûcheron
     - (potier)
     - constructeur (maison)
 
