@@ -8,35 +8,35 @@ Le but de ce projet est de simuler un système d'allocation de tâches
 
 === Liste des tâches possibles ===
 
-	* Paléolithique
-		- chasseur
-		- cueilleur 
-		- récolteur de bois
-		- constructeur (cabane)
+    * Paléolithique
+        - chasseur
+        - cueilleur 
+        - récolteur de bois
+        - constructeur (cabane)
 
-	* Mésolithique
-		- pêche 
-		- archer (spécialité chasseur)
-		- ramasseur de coquillage (spécialité cueilleur)
+    * Mésolithique
+        - pêche 
+        - archer (spécialité chasseur)
+        - ramasseur de coquillage (spécialité cueilleur)
 
-	* Néolithique 
-		- agriculteur
-		- éleveur
-		- bûcheron
-		- (potier)
-		- constructeur (maison)
+    * Néolithique 
+        - agriculteur
+        - éleveur
+        - bûcheron
+        - (potier)
+        - constructeur (maison)
 
-	* Âge de bronze
-		… 
-		
-		
+    * Âge de bronze
+        … 
+        
+
 === Liste des besoins des agents ===
 
-	Tout agent Humain possède les besoins suivant :
-		* protéines (fourni par les ressources de la chasse)
-		* fibre (fourni par les ressources de la cuillette)
-		* un toit
-	
+    Tout agent Humain possède les besoins suivant :
+        * protéines (fourni par les ressources de la chasse)
+        * fibre (fourni par les ressources de la cuillette)
+        * un toit
+    
 
 === Modélistation des compétences ===
 
@@ -52,7 +52,7 @@ Le but de ce projet est de simuler un système d'allocation de tâches
         * Réseau d'accointance
         * Appels d'offre
         * Hybride
-	    * Modèle à agent réactif
+        * Modèle à agent réactif
 
     Comparaison des Quatre méthodes dans deux situations :
         * Sans acquisition de compétences
@@ -61,11 +61,11 @@ Le but de ce projet est de simuler un système d'allocation de tâches
 
 === Étape de réalisation ===
 
-	* Implémentation d'un algorithme pour la générer la répartition 
-	initiale des ressources (forêt, plaine, roche, eau…)
-	
-	* Implémentation de la faune (mouton, lapin, poisson…)
-	
-	* Implémentation du modèle par agents réactifs
-	
-	* …
+    * Implémentation d'un algorithme pour la générer la répartition 
+    initiale des ressources (forêt, plaine, roche, eau…)
+    
+    * Implémentation de la faune (mouton, lapin, poisson…)
+
+    * Implémentation du modèle par agents réactifs
+
+    * …
