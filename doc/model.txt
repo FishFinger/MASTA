@@ -38,4 +38,15 @@ Le but de ce projet est de simuler un système d'allocation de tâches
         * des préférences pour certain métier (si il aime un métier,
             il évolue plus vite dans celui-ci et inversement)
         * sa compétence dans chaque métier (valeur entre 0 et 1)
+
+=== Tests ===
+
+    Trois méthodes d'allocation de tâches :
+        * Réseau d'accointance
+        * Appels d'offre
+        * Hybride
+
+    Comparaison des trois méthodes dans deux situations :
+        * Sans acquisition de compétences
+        * avec acquisition de compétences
         
