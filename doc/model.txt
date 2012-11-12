@@ -45,16 +45,20 @@ Le but de ce projet est de simuler un système d'allocation de tâches
         * des préférences pour certain métier (si il aime un métier,
             il évolue plus vite dans celui-ci et inversement)
         * sa compétence dans chaque métier (valeur entre 0 et 1)
-     
-        
-=== Modes d’allocation des tâches ===
 
-	* Modèle à agent réactif
-	* Modèle centralisé
-	* Réseau d'accointances
-	* Réseau contractuel
-    
+=== Tests ===
+
+    Quatre méthodes d'allocation de tâches :
+        * Réseau d'accointance
+        * Appels d'offre
+        * Hybride
+	    * Modèle à agent réactif
+
+    Comparaison des Quatre méthodes dans deux situations :
+        * Sans acquisition de compétences
+        * avec acquisition de compétences
         
+
 === Étape de réalisation ===
 
 	* Implémentation d'un algorithme pour la générer la répartition 
