@@ -1,38 +1,46 @@
-MASTA
-Multi Agent System for Tasking Allocation
+ =============================== MASTA ================================
+                 Multi Agent System for Task Allocation
+ ======================================================================
 
 
-Le but de ce projet est de simuler un système d'allocation de tâches
+Le but de ce projet est d'implémenter un système multi-agent ressemblant
+à un RTS (Real-Time Strategy). Évidement, à la différence d'un RTS, il 
+n'y aura pas de joueur Humain, c'est les agents autonomes du système qui
+devront se charger de récolter les ressources nécessaire à leurs survies
+et à la construction des infrastructures nécessaires à leur société. 
+L'intêret principale étant d'étudier et tester différents systèmes de 
+répartition des tâches.
 
 
-Liste des tâches possibles :
+=== Liste des tâches possibles ===
 
-Paléolithique
-    - chasseur
-    - cueilleur 
-    - bûcheron 
-    - constructeur (cabane)
+	* Paléolithique
+		- chasseur
+		- cueilleur 
+		- bûcheron 
+		- constructeur (cabane)
 
-Mésolithique
-    - pêche 
-    - archer (spécialité chasseur)
-    - ramasseur de coquillage (spécialité cueilleur)
+	* Mésolithique
+		- pêche 
+		- archer (spécialité chasseur)
+		- ramasseur de coquillage (spécialité cueilleur)
 
-Néolithique 
-    - agriculteur
-    - éleveur
-    - (potier)
-    - constructeur (maison)
+	* Néolithique 
+		- agriculteur
+		- éleveur
+		- (potier)
+		- constructeur (maison)
 
-Âge de bronze
-    … 
+	* Âge de bronze
+		… 
+	
 
 
+=== Modélistation des compétences ===
 
-Modélistation des savoir-faire :
-
-    Tout humain est caractérisé par 
-        - une courbe de capacité d'apprentissage
-        - des préférences pour certain métier (si il aime un métier,
+    Tout agent est caractérisé par :
+        * une courbe de capacité d'apprentissage
+        * des préférences pour certain métier (si il aime un métier,
             il évolue plus vite dans celui-ci et inversement)
-        - sont savoir faire dans chaque métier (valeur entre 0 et 1)
+        * sa compétence dans chaque métier (valeur entre 0 et 1)
+        
