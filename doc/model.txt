@@ -3,13 +3,7 @@
  ======================================================================
 
 
-Le but de ce projet est d'implémenter un système multi-agent ressemblant
-à un RTS (Real-Time Strategy). Évidement, à la différence d'un RTS, il 
-n'y aura pas de joueur Humain, c'est les agents autonomes du système qui
-devront se charger de récolter les ressources nécessaire à leurs survies
-et à la construction des infrastructures nécessaires à leur société. 
-L'intêret principale étant d'étudier et tester différents systèmes de 
-répartition des tâches.
+Le but de ce projet est de simuler un système d'allocation de tâches
 
 
 === Liste des tâches possibles ===
@@ -17,7 +11,7 @@ répartition des tâches.
 	* Paléolithique
 		- chasseur
 		- cueilleur 
-		- bûcheron 
+		- récolteur de bois
 		- constructeur (cabane)
 
 	* Mésolithique
@@ -28,6 +22,7 @@ répartition des tâches.
 	* Néolithique 
 		- agriculteur
 		- éleveur
+		- bûcheron
 		- (potier)
 		- constructeur (maison)
 
