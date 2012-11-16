@@ -19,6 +19,17 @@
 </div>
 	
 <div class="slide">
-	<h1>Slide 1</h1>
+	<h1>Problématique</h1>
+	<ul style="text-decoration:line-through">
+		<li>Agents egocentrés</li>
+		<li>Maximiser sa propre utilité</li>
+	</ul>
+	<h3>Enjeux</h3>
+	<ul>
+		<li title="Entente commune dans le but de coordonner les actions des agents.">Entente commune</li>
+		<li title="La négociation est le mécanisme par lequel les agents peuvent arriver à un accord commun.">Négociation</li>
+		<li title="Demander aux autres agents de réaliser des tâches ou sous tâches à sa place.">Allocation de tâches</li>
+		<li>
+	</ul>
 </div>
 

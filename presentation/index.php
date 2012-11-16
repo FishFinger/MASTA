@@ -26,6 +26,7 @@
 <?php include '1.php' ?>
 <?php include '2.php' ?>
 <?php include '3.php' ?>
+<?php include '4.php' ?>
 
 </body>
 </html>
