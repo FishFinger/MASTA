@@ -20,47 +20,104 @@
 	
 <div class="slide">
 	<h1>Problématique</h1>
-	<h3>Domaines d'application</h3>
-	<ul title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
-		<li>Agent cognitif</li>
-		<li title="Par exemple : démons Unix">Agent logiciel</li>
-		<li>Agent mobile</li>
-		<li>Agent assistant</li>
-		<li>Agent robotique</li>
-		<li>Résolution distribuée de problèmes</li>
-		<li>Agent réactif</li>
-		<li>Vie artificielle</li>
-		<li>Simulation multi-agent</li>
-		<li>Agent de loisir</li>
-	</ul>
-	<h3>Enjeux</h3>
-	<ul>
-		<li style="font-weight:bold;color:green">Autonomie</li>
-		<li style="font-weight:bold;color:brown">Organisation collective</li>
-	</ul>
+	<h3>Domaines d'application des SMA</h3>
+	<table style="width:95%;height:70%;text-align:center;" title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
+		<tr>
+			<td>Agent cognitif</td>
+			<td title="Par exemple : démons Unix">Agent logiciel</td>
+			<td>Agent mobile</td>
+		</tr>
+		<tr>
+			<td>Agent assistant</td>
+			<td>Agent robotique</td>
+			<td>Résolution distribuée de problèmes</td>
+		</tr>
+		<tr>
+			<td>Agent réactif</td>
+			<td>Vie artificielle</td>
+			<td>Simulation multi-agent</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Agent de loisir</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="3" style="border-top:2px solid black">
+			</td>
+		<tr>
+			<td><b>Enjeux :</b></td>
+			<td style="font-weight:bold;color:green">Autonomie</td>
+			<td style="font-weight:bold;color:brown">Organisation collective</td>
+		</tr>
+	</table>
+</div>
+<div class="slide">
 
-	<h3>Notions</h3>
+	<h3>Coopération</h3>
+
+<!--
+Bouquin pas ferber
 	<ul>
 		<li title="1.3">Coordination
-<p>Allocation / Partage de ressources rares dans le but d'atteindre un but commun.</p></li>
-		<li>Négociation
-	<p title="page 40 http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">Présence d'une forme de conflit qui doit être résolu de façon décentralisée par des agents égocentrés ayant une rationalité limitée et des informations incomplètes</p></li>
-		<li>Planification</li>
+			<p>Allocation / Partage de ressources rares dans le but d'atteindre un but commun.</p>
+			<p style="font-style:italic">Prise de décision distribuée</p></li>
+		<li title="1.4">Négociation
+			<p>Résolution de conflits grâce à l'échange d'informations.</p></li>
+			<p style="font-style:italic"></p></li>
+		<li title="1.5">Planification
+			<p>Division du travail dans un ordre précis afin d'orienter les agents vers un but commun.</p></li>
+		<li title="1.6">Communication
+			<p>Communication directe entre agents / Communication via un blackboard.</p></li>
+	</ul>
+-->
+	<ul title="ferber 2.5">
+		<li title="p. 400">Résolution de conflits
+			<p>Éviter les désaccords entre agents.</p>
+			<p style="font-style:italic;margin-top:-1em">Arbitrage / Négociation.</p></li>
+		<li title="p. 400">Coordination
+			<p>Assure la bonne coopération entre les agents autonomes.</p>
+			<p style="font-style:italic;margin-top:-1em">Besoin fort de communcations entre agents.</p></li>
+		<li title="p. 400">Collaboration
+			<p>Permet la réalisation d'une unique tâche par plusieurs agents.</p>
+			<p style="font-style:italic;margin-top:-1em">Systèmes de répartition des tâches.</p></li>
 	</ul>
 </div>
 
 <div class="slide">
 	<h1>Problématique</h1>
-	<ul style="text-decoration:line-through">
-		<li>Agents egocentrés</li>
-		<li>Maximiser sa propre utilité</li>
+	<table>
+	<tr><td style="max-width:48%">
+	<h3>Question</h3>
+	<ul class="incremental">
+		<li>Qui doit faire quoi ?</li>
+		<li>et avec quels moyens ?</li>
+		<li>en fonction
+			<ul>
+				<li>des buts des agents,</li>
+				<li>des compétences des agents,</li>
+				<li>et des contraintes contextuelles</li>
+			</ul>
+		</li>
 	</ul>
-	<h3>Enjeux</h3>
-	<ul>
-		<li title="Entente commune dans le but de coordonner les actions des agents.">Entente commune</li>
-		<li title="La négociation est le mécanisme par lequel les agents peuvent arriver à un accord commun.">Négociation</li>
-		<li title="Demander aux autres agents de réaliser des tâches ou sous tâches à sa place.">Allocation de tâches</li>
-		<li>
-	</ul>
+	</td><td style="max-width:48%">
+	<h3>Besoins pour l'allocation de tâches</h3>
+	<ol class="incremental">
+		<li>Décomposer une tâche</li>
+		<li>Définition de rôles</li>
+		<li>Systèmes d'allocation</li>
+	</ol>
+	</td>
+	</tr>
+	</table>
 </div>
 
+<div class="slide">
+	<h1>Problématique</h1>
+	<h3>Décomposer une tâche</h3>
+</div>
+
+<div class="slide">
+	<h1>Problématique</h1>
+	<h3>Définition des rôles</h3>
+</div>
