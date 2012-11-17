@@ -13,7 +13,9 @@
 	
 	<ol>
 		<li><b><u>Problématique</u></b></li>
-		<li>Systèmes d'allocations</li>
+    <li>Allocation émergente</li>
+    <li>Allocation centralisée</li>
+    <li>Allocation décentralisée</li>
 		<li>Applications</li>
 	</ol>
 </div>
