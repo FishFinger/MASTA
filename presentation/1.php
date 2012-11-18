@@ -135,11 +135,11 @@ Bouquin pas ferber
 	<h3>Définition des rôles</h3>
 	<div class="incremental" 
 	 style="margin-left: 4em; position: relative"> 
-	  <img src="img/client-fournisseur.png" alt="face" 
-	   style="position: static; vertical-align: bottom"/> 
-	  <img src="img/fournisseur-client.png" alt="eyes" 
-	    style="position: absolute; left: 0; top: 0" /> 
-	  <img src="img/fournisseur-mediateur-client.png" alt="nose" 
-	    style="position: absolute; left: 0; top: 0" /> 
+	  <img src="img/client-fournisseur.png" alt="" 
+	   style="position: static; vertical-align: bottom;width:20em"/> 
+	  <img src="img/fournisseur-client.png" alt="" 
+	    style="position: absolute; left: 0; top: 0;width:20em" /> 
+	  <img src="img/fournisseur-mediateur-client.png" alt="" 
+	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	</div> 
 </div>
