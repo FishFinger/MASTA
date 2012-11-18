@@ -14,8 +14,11 @@
 <div class="slide">
 	<h1>Allocation centralisée</h1>
   <h2>Système hierarchique</h2>
+<img alt="" src="img/hierarchique.png" style="float:right;width:20em;margin-right:2em" />
   <ul>
-    
+    <li>Organisation fixe</li>
+    <li>Système rigide</li>
+    <li>Sorte de réseau d'accointance statique sous forme d'arbre</li>
   </ul>
 </div>
 

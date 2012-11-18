@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="15cm" height="7cm" viewBox="338 118 283 123" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="340" y="120" width="280" height="120"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" x="340" y="120" width="280" height="120"/>
+  </g>
+  <image x="370" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent.png"/>
+  <image x="560" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent.png"/>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="390" y="190.782">
+    <tspan x="390" y="190.782">A</tspan>
+  </text>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="580" y="190.782">
+    <tspan x="580" y="190.782">B</tspan>
+  </text>
+</svg>

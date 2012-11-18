@@ -1,7 +1,7 @@
 <div class="slide">
 	<h1>GMIN334</h1>
 	<div style="text-align:center">
-	<h2>Projet Sociétés Virtuelles</h2>
+	<h2>Présentation Sociétés Virtuelles</h2>
 	<p><span>Université Montpellier 2</span></p>
 	<p><span style="font-style:italic">Thibaut Marmin - Clément Sipieter</span></p>
 	<p>Mardi 20 Novembre 2012</p>
@@ -135,8 +135,10 @@ Bouquin pas ferber
 	<h3>Définition des rôles</h3>
 	<div class="incremental" 
 	 style="margin-left: 4em; position: relative"> 
-	  <img src="img/client-fournisseur.png" alt="" 
+	  <img src="img/agent-agent.png" alt="" 
 	   style="position: static; vertical-align: bottom;width:20em"/> 
+	  <img src="img/client-fournisseur.png" alt="" 
+	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	  <img src="img/fournisseur-client.png" alt="" 
 	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	  <img src="img/fournisseur-mediateur-client.png" alt="" 

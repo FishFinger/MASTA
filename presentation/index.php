@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="generator" content="HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
-	<title>HTML Slidy - template for basic presentations</title>
+	<title>Présentation GMIN334</title>
 
 	<meta name="duration" content="30" />
 	<meta charset="utf-8" />
