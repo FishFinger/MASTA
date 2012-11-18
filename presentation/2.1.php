@@ -52,15 +52,16 @@
   <h1>Allocation émergente</h1>
  
   <ul>
-    <li>Avantage</li>
+    <li>Avantages</li>
       <ul>
-        <li>Efficace</li>
-        <li>Robuste</li>
-        <li>Flexible</li>
+        <li>efficace</li>
+        <li>robuste</li>
+        <li>flexible</li>
       </ul>
     <li>Inconvénients</li>
       <ul>
-       
+        <li>non optimale</li>
+        <li>zone d'ombre</li>
       </ul>
   </ul>
 </div>
