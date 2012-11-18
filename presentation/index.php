@@ -24,7 +24,9 @@
 </div>
 
 <?php include '1.php' ?>
-<?php include '2.php' ?>
+<?php include '2.1.php' ?>
+<?php include '2.2.php' ?>
+<?php include '2.3.php' ?>
 <?php include '3.php' ?>
 <?php include '4.php' ?>
 
