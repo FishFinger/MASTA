@@ -88,38 +88,58 @@ Bouquin pas ferber
 
 <div class="slide">
 	<h1>Problématique</h1>
-	<table>
-	<tr><td style="max-width:48%">
-	<h3>Question</h3>
-	<ul class="incremental">
-		<li>Qui doit faire quoi ?</li>
-		<li>et avec quels moyens ?</li>
-		<li>en fonction
-			<ul>
-				<li>des buts des agents,</li>
-				<li>des compétences des agents,</li>
-				<li>et des contraintes contextuelles</li>
+	<div class="incremental">
+		<div style="max-width:48%;position:absolute;">
+			<h3>Question</h3>
+			<ul class="incremental">
+				<li>Qui doit faire quoi ?</li>
+				<li>et avec quels moyens ?</li>
+				<li>en fonction
+					<ul>
+						<li>des buts des agents,</li>
+						<li>des compétences des agents,</li>
+						<li>et des contraintes contextuelles</li>
+					</ul>
+				</li>
 			</ul>
-		</li>
-	</ul>
-	</td><td style="max-width:48%">
-	<h3>Besoins pour l'allocation de tâches</h3>
-	<ol class="incremental">
-		<li>Décomposer une tâche</li>
-		<li>Définition de rôles</li>
-		<li>Systèmes d'allocation</li>
-	</ol>
-	</td>
-	</tr>
-	</table>
+		</div>
+		<div style="max-width:48%;float:right">
+			<h3>Besoins pour l'allocation de tâches</h3>
+			<ol class="incremental">
+				<li>Décomposer une tâche</li>
+				<li>Définition de rôles</li>
+				<li>Systèmes d'allocation</li>
+			</ol>
+		</div>
+	</div>
 </div>
 
-<div class="slide">
+<div class="slide decompo">
 	<h1>Problématique</h1>
 	<h3>Décomposer une tâche</h3>
+	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
+	<ul>
+		<li>Minimiser la coordination</li>
+		<li>Diminuer la quantité d'informations échangée</li>
+		<li>Éviter les conflits</li>
+		
+	</ul>
+</div>
+
+<div class="background decompo" style="height:100%;top:2.1em;background:none;">
+	<img alt="" src="img/taches_decompo.svg" style="opacity:0.5;position:absolute;bottom:0;right:0;width:100%;height:100%;"/>
 </div>
 
 <div class="slide">
 	<h1>Problématique</h1>
 	<h3>Définition des rôles</h3>
+	<div class="incremental" 
+	 style="margin-left: 4em; position: relative"> 
+	  <img src="img/client-fournisseur.png" alt="face" 
+	   style="position: static; vertical-align: bottom"/> 
+	  <img src="img/fournisseur-client.png" alt="eyes" 
+	    style="position: absolute; left: 0; top: 0" /> 
+	  <img src="img/fournisseur-mediateur-client.png" alt="nose" 
+	    style="position: absolute; left: 0; top: 0" /> 
+	</div> 
 </div>

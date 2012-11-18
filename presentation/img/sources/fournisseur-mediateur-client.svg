@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="15cm" height="14cm" viewBox="338 118 283 263" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="340" y="120" width="280" height="260"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" x="340" y="120" width="280" height="260"/>
+  </g>
+  <image x="370" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent_vert.png"/>
+  <image x="560" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent_rouge.png"/>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #990f00" d="M 518.667 282.456 C 561.961,236.883 528.041,230.033 558.041,202.664"/>
+    <polygon style="fill: #990f00" points="513.501,287.894 516.763,277.2 518.667,282.456 524.013,284.088 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #990f00" points="513.501,287.894 516.763,277.2 518.667,282.456 524.013,284.088 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #2282cd" d="M 420.012 203.166 C 451.976,225.036 427.994,262.048 467.994,294.68"/>
+    <polygon style="fill: #2282cd" points="413.822,198.931 424.898,200.451 420.012,203.166 419.251,208.704 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #2282cd" points="413.822,198.931 424.898,200.451 420.012,203.166 419.251,208.704 "/>
+  </g>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="390" y="190.782">
+    <tspan x="390" y="190.782">A</tspan>
+  </text>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="580" y="190.782">
+    <tspan x="580" y="190.782">B</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:sanserif;font-style:normal;font-weight:normal" x="390" y="229.714">
+    <tspan x="390" y="229.714">Fournisseur</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:sanserif;font-style:normal;font-weight:normal" x="580" y="229.714">
+    <tspan x="580" y="229.714">Client</tspan>
+  </text>
+  <image x="470" y="270" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent_bleu.png"/>
+  <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:sanserif;font-style:normal;font-weight:normal" x="490" y="359.714">
+    <tspan x="490" y="359.714">Médiateur</tspan>
+  </text>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="490" y="320.782">
+    <tspan x="490" y="320.782">C</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 6; stroke: #43aa38" d="M 411.996 172.676 C 461.996,150.044 508.004,150.044 549.134,168.661"/>
+    <polygon style="fill: #43aa38" points="555.967,171.753 544.795,172.185 549.134,168.661 548.918,163.075 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #43aa38" points="555.967,171.753 544.795,172.185 549.134,168.661 548.918,163.075 "/>
+  </g>
+</svg>
