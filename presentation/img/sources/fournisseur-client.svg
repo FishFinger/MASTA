@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="15cm" height="7cm" viewBox="338 118 283 123" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="340" y="120" width="280" height="120"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ffffff" x="340" y="120" width="280" height="120"/>
+  </g>
+  <image x="370" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent_vert.png"/>
+  <image x="560" y="140" width="40" height="85.2632" xlink:href="file:///home/thibaut/Documents/M2/societe_virtuelle/presentation/img/sources/agent_rouge.png"/>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #990f00" d="M 419.551 158.525 C 452.006,132.047 517.994,132.047 557.994,164.679"/>
+    <polygon style="fill: #990f00" points="413.739,163.266 418.327,153.07 419.551,158.525 424.648,160.819 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #990f00" points="413.739,163.266 418.327,153.07 419.551,158.525 424.648,160.819 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 6; stroke: #43aa38" d="M 412.006 199.078 C 462.006,236.446 518.006,225.048 549.971,203.178"/>
+    <polygon style="fill: #43aa38" points="556.161,198.943 550.731,208.716 549.971,203.178 545.084,200.463 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #43aa38" points="556.161,198.943 550.731,208.716 549.971,203.178 545.084,200.463 "/>
+  </g>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="390" y="190.782">
+    <tspan x="390" y="190.782">A</tspan>
+  </text>
+  <text style="fill: #ffffff;text-anchor:middle;font-size:22.5778;font-family:Asap;font-style:normal;font-weight:700" x="580" y="190.782">
+    <tspan x="580" y="190.782">B</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:sanserif;font-style:normal;font-weight:normal" x="390" y="229.714">
+    <tspan x="390" y="229.714">Fournisseur</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:sanserif;font-style:normal;font-weight:normal" x="580" y="229.714">
+    <tspan x="580" y="229.714">Client</tspan>
+  </text>
+</svg>
