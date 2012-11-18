@@ -1,14 +1,16 @@
 <div class="slide">
-	<h1>Plan</h1>
-	
-	<ol>
-		<li>Problématique</li>
-    <li><b><u>Allocation émergente</u></b></li>
-    <li>Allocation centralisée</li>
-    <li>Allocation décentralisée</li>
-		<li>Applications</li>
-	</ol>
-  
+	<h1>Allocation émergente</h1>
+	<h3>Système d'allocation</h3>
+	<div class="vbox"></div>
+	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em">
+		<h2>Allocation émergente</h2>
+	</div>
+	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;opacity:0.3;color:gray">
+		<h2>Allocation centralisée</h2>
+	</div>
+	<div class="hbox" style="height:auto;text-align:center;opacity:0.3;color:gray">
+		<h2>Allocation décentralisée</h2>
+	</div>
 </div>
 
 <div class="slide">
