@@ -14,7 +14,15 @@
 
 <div class="slide">
 	<h1>Allocation décentralisée</h1>
+  <img src="../img/social-networking.png" style="display: block; margin: 0 auto; width:80%"/>
+
+</div>
+
+<div class="slide">
+	<h1>Allocation décentralisée</h1>
   <h2>Allocation par réseau d'accointance</h2>
+    <img src="../img/accointances.png" style="display: block; margin: 0 auto; width:40em"/>
+
   <ul>
     
   </ul>
