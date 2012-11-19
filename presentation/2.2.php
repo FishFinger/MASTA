@@ -1,26 +1,27 @@
 <div class="slide">
 	<h1>Allocation centralisée</h1>
-	<h3>Système d'allocation</h3>
+	<h2>Système d'allocation</h2>
 	<div class="vbox"></div>
 	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;opacity:0.3;color:gray">
-		<h2>Allocation émergente</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation émergente</p>
 	</div>
-	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em">
-		<h2>Allocation centralisée</h2>
-		<ul style="background: none;">
+	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;">
+		<p style="font-size:1.3em;font-weight:bold">Allocation centralisée
+		<ul style="margin-top:-1em;">
 			<li style="background: none;margin:0;padding:0">Système hiérarchique</li>
 			<li style="background: none;margin:0;padding:0">Allocation par médiateur</li>
 		</ul>
+		</p>
 	</div>
 	<div class="hbox" style="height:auto;text-align:center;opacity:0.3;color:gray">
-		<h2>Allocation décentralisée</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation décentralisée</p>
 	</div>
 </div>
 
 <div class="slide">
 	<h1>Allocation centralisée - Système hierarchique</h1>
-<img alt="" src="img/hierarchique.png" style="float:right;width:20em;margin-right:2em" />
   <h2>Système hierarchique</h2>
+<img alt="" src="img/hierarchique.png" style="float:right;width:20em;margin-right:2em" />
   <h3>Fonctionnement</h3>
   <ul>
     <li>Structure hiérarchique</li>
@@ -30,8 +31,8 @@
   </ul>
   <div class="incremental">
     <div>
-      <h3>Inconvénients</h3>
-      <ul style="color:brown">
+
+      <ul class="negative">
         <li title="Si un agent possédant une compétence unique meurt, alors toute l'équipe est inutile">Problème si disparition d'un agent</li>
         <li title="Si un supérieur tarde à prendre une décision, toute l'équipe est inutile">Faible efficacité</li>
       </ul>
@@ -42,7 +43,7 @@
 <div class="slide">
 	<h1>Allocation centralisée - Système par médiateur</h1>
   <h2>Allocation par médiateur</h2>
-
+	<div class="incremental">
 	<div class="incremental" 
 	 style="margin: auto; position: relative; width:30em;"> 
 	  <img src="img/mediateur_anim/11systeme-mediateur.png" alt="" 
@@ -70,21 +71,17 @@
 	  <img src="img/mediateur_anim/0systeme-mediateur.png" alt="" 
 	    style="position: absolute; left: 0; top: 0;width:30em" /> 
 	</div>   
-</div>
-
-<div class="slide">
-  <h1>Allocation centralisée - Système par médiateur</h1>
-  <h2>Pour / Contre</h2>
-  <h3>+</h3>
-  <ul>
+  <div class="popup spopup">
+  <ul class="positive">
     <li>Cohérence</li>
     <li>Facile</li>
   </ul>
-  <h3>-</h3>
-  <ul style="color:brown">
+  <ul class="negative">
     <li>Scalabilité</li>
     <li>Défaillance</li>
   </ul>
+  </div>
+  </div>
 </div>
 
 <div class="slide">

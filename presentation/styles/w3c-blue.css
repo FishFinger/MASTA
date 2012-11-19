@@ -244,6 +244,38 @@ p,pre,ul,ol,blockquote,h2,h3,h4,h5,h6,dl,table {
   margin-right: 1em;
 }
 
+ul.positive, ul.negative {
+    padding: 0 0 0 2em;
+    background-position: left center;
+}
+
+ul.positive {
+    background: url("../graphics/positive.png") no-repeat scroll left center transparent;
+    color: green;
+}
+
+ul.negative {
+    background: url("../graphics/negative.png") no-repeat scroll left center transparent;
+    color: brown;
+}
+
+ul.positive > li, ul.negative > li {
+    background:none;
+}
+
+
+h2 {
+    font-size:1.1em;
+    border-left: 0.3em solid #CAD4E6;
+    border-bottom: 0.1em solid #CAD4E6;
+    padding: 0.2em 0 0.2em 0.5em;
+}
+
+h2.fullendadre {
+    border: 0.1em solid #CAD4E6;
+}
+
+
 p.subhead { font-weight: bold; margin-top: 2em; }
 
 div.cover p.explanation {
@@ -310,6 +342,54 @@ li li li li, dd dd dd dt {
   list-style-type: disc;
   background: transparent;
   padding: 0 0 0 0;
+}
+
+div.popup {
+  z-index:200;
+  position: fixed;
+  width:50%;
+  top: 4.5em;
+  margin-left:25%;
+  margin-right:25%;
+  max-height: 50%;
+  border:1px solid silver;
+  background:#F0F0F0;
+  box-shadow: 0.2em 0.2em 0.4em rgba(0,0,0,0.5);
+  overflow:auto;
+  text-align:left;
+  clear:both;
+}
+
+div.spopup {
+  width:40%;
+  top: 7em;
+  margin-left:30%;
+  margin-right:30%;
+  max-height: 40%;
+}
+
+div.xpopup {
+  width:60%;
+  top: 4em;
+  margin-left:20%;
+  margin-right:20%;
+  max-height: 60%;
+}
+
+div.xxpopup {
+  width:70%;
+  top: 4em;
+  margin-left:15%;
+  margin-right:15%;
+  max-height: 70%;
+}
+
+div.xxxpopup {
+  width:80%;
+  top: 3.6em;
+  margin-left:10%;
+  margin-right:10%;
+  max-height: 80%;
 }
 
 /* rectangular blue bullet + unfold/nofold/fold widget */
