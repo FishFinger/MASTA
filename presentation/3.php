@@ -3,6 +3,25 @@
 
   <img src="img/warcraft2.png" alt="" style="float: right; width:15em; margin:2em;"/> 
 
+
+    <ul>
+     <li>Tâches :</li>
+     <ul>
+         <li>agriculteur</li>
+         <li>éleveur</li>
+         <li>bûcheron</li>
+         <li>constructeur</li>
+        </ul>
+    </ul>
+        
+       
+</div>
+
+<div class="slide">
+	<h1>Projet</h1>
+
+  <img src="img/warcraft2.png" alt="" style="float: right; width:15em; margin:2em;"/> 
+
    <ul>
      <li>Quatre méthodes d'allocation de tâches :
 </li>
@@ -16,7 +35,10 @@
      <ul>
          <li>Sans acquisition de compétences</li>
          <li>avec acquisition de compétences</li>
-        </ul>
-        </ul>
+     </ul>
+     
+    </ul>
+        
+       
 </div>
 
