@@ -17,7 +17,7 @@
     <li>Allocation émergente</li>
     <li>Allocation centralisée</li>
     <li>Allocation décentralisée</li>
-    <li>Conclusion</li>
+    <li>Projet</li>
 	</ul>
 	</div>
 </div>
@@ -25,7 +25,9 @@
 <div class="slide">
 	<h1>Problématique - Contexte</h1>
 	<h2>Domaines d'application des SMA</h2>
-	<table style="width:95%;height:70%;text-align:center;" title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
+  	<div class="incremental"  style="height:80%">
+	<div  style="height:100%">
+	<table style="width:90%;height:100%;text-align:center;" title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
 		<tr>
 			<td>Agent cognitif</td>
 			<td title="Par exemple : démons Unix">Agent logiciel</td>
@@ -46,15 +48,14 @@
 			<td>Agent de loisir</td>
 			<td></td>
 		</tr>
-		<tr>
-			<td colspan="3" style="border-top:2px solid black">
-			</td>
-		<tr>
-			<td><b>Enjeux :</b></td>
-			<td style="font-weight:bold;color:green">Autonomie</td>
-			<td style="font-weight:bold;color:brown">Organisation collective</td>
-		</tr>
 	</table>
+	</div>
+	<div class="popup spopup">
+			<h2>Enjeux</h2>
+			<li style="font-weight:bold;color:green">Autonomie</li>
+			<li style="font-weight:bold;color:orange">Organisation collective</li>
+        </div>
+	</div>
 </div>
 <div class="slide">
 	<h1>Problématique - Contexte</h1>
@@ -94,7 +95,7 @@ Bouquin pas ferber
 	<h1>Problématique - Définition</h1>
 	<div class="incremental">
 		<div style="max-width:48%;position:absolute;">
-			<h2>Question</h2>
+			<h2>Question <span class="bib">[FERBER 1995]</span></h2>
 			<ul class="incremental">
 				<li>Qui doit faire quoi ?</li>
 				<li>et avec quels moyens ?</li>
@@ -120,7 +121,7 @@ Bouquin pas ferber
 
 <div class="slide decompo">
 	<h1>Problématique - Besoin n°1</h1>
-	<h2>Décomposer une tâche</h2>
+	<h2>Décomposer une tâche <span class="bib">[Bond & Gasser 1988]</span> <span class="bib">[Gasser & Hill 1990]</span></h2>
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
 		<li>Minimiser la coordination</li>

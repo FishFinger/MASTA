@@ -244,6 +244,16 @@ p,pre,ul,ol,blockquote,h2,h3,h4,h5,h6,dl,table {
   margin-right: 1em;
 }
 
+h3 {
+  font-size: 1em;
+}
+
+.bib{
+  font-weight: normal;
+  color: gray;
+  font-size: 0.6em;
+}
+
 ul.positive, ul.negative {
     padding: 0 0 0 2em;
     background-position: left center;
@@ -344,11 +354,22 @@ li li li li, dd dd dd dt {
   padding: 0 0 0 0;
 }
 
+.popup h2 {
+  text-align:center;
+  font-size:1em;
+  margin:0
+  background: none;
+  border:none;
+  background-color:#FAFAFA;
+  margin:-1em -1em 1em -1em;
+  border-bottom: 1px solid #A0A0A0;
+}
+
 div.popup {
   z-index:200;
   position: fixed;
   width:50%;
-  top: 4.5em;
+  top: 10%;
   margin-left:25%;
   margin-right:25%;
   max-height: 50%;
@@ -358,6 +379,7 @@ div.popup {
   overflow:auto;
   text-align:left;
   clear:both;
+  padding:1em;
 }
 
 div.spopup {
@@ -391,6 +413,8 @@ div.xxxpopup {
   margin-right:10%;
   max-height: 80%;
 }
+
+
 
 /* rectangular blue bullet + unfold/nofold/fold widget */
 
