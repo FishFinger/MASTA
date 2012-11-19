@@ -125,10 +125,9 @@ Bouquin pas ferber
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
 		<li>Minimiser la coordination</li>
-		<li>Diminuer la quantité d'informations échangée</li>
 		<li>Éviter les conflits</li>
-		
 	</ul>
+	<p>Diminuer la quantité d'informations échangée</p>
 </div>
 
 <div class="background decompo" style="height:100%;top:2.1em;background:none;">

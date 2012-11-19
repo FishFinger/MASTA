@@ -26,7 +26,6 @@
     <li>Structure hiérarchique</li>
     <li>Organisation prédéfinie et fixe</li>
     <li>Agents spécialisés</li>
-    <li>Sorte de réseau d'accointance statique sous forme d'arbre</li>
   </ul>
   <div class="incremental">
     <div>
