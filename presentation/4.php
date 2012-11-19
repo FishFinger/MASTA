@@ -2,7 +2,7 @@
   <h1>The End</h1>
 	<h2>Merci pour votre attention</h2>
   <div id="biblio" style="font-size:0.8em">
-  <ul class="outline">
+  <ul >
     <li>Bibliographique
     <ul>
       <li><strong>[Drogoul 1993]</strong> Drogoul A. (1993) De la simulation multi-agent à la résolution collective de problèmes. Une étude de l'émergence de structures d'organisation dans les

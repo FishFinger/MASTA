@@ -35,7 +35,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_1.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_1.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 2 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -67,7 +67,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_2.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_2.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 3 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -99,7 +99,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_3.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_3.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 4 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -131,7 +131,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_4.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_4.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 5 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -163,7 +163,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_5.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_5.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 6 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -195,7 +195,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_6.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_6.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 <!-- ETAPE 7 -->
 	  <div style="background: none repeat scroll 0% 0% white;width: 100%;position: absolute;right: 1em;top: 3em;">
@@ -227,7 +227,7 @@
 		      </tr>
 		    </table>
 		  </div>
-	  <img src="img/accointances_7.png" alt="" style="float:right;width:25em;margin:1em 1em 0 0"/> 
+	  <img src="img/accointances_7.png" alt="" style="float:right;width:25em;margin:0 5em"/> 
 	  </div>
 	</div> 
 </div>
