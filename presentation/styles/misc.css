@@ -18,3 +18,21 @@ table.classic
   right: 5em; 
   top: 5em;" 
 }
+
+.clem_style2
+{
+  background: white; 
+  display: block;
+  position: relative;
+  width: 30em;
+  margin: auto;
+}
+
+.clem_style2 img
+{
+  display: block;
+  background: white; 
+  width:30em; 
+  position: absolute; 
+  margin: 0 auto; 
+}

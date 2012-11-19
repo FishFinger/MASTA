@@ -5,6 +5,9 @@
   <ul class="outline">
     <li>Bibliographique
     <ul>
+      <li><strong>[Drogoul 1993]</strong> Drogoul A. (1993) De la simulation multi-agent à la résolution collective de problèmes. Une étude de l'émergence de structures d'organisation dans les
+systèmes multi-agents.. Thèse de l’université Paris 6.</li>
+
       <li><strong>[Ferber 1995]</strong> Ferber J. (1995) <i>”Les Systèmes Multi Agents : Vers une intelligence collective”.</i> InterEditions, chap. 7</li>
 
   		<li><strong>Politechnica University of Bucharest (2002)</strong> <i><a href="http://turing.cs.pub.ro/auf2/html/chapters/chapters.html">Agents Intelligents, cours WEB interactif</a></i>. Contenu WEB, chap. 5
