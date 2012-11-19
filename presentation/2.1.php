@@ -27,7 +27,7 @@
   <h1>Allocation émergente</h1>
   <h2>Présentation du projet MANTA [Drogoul 1993]</h2>
   
-  <img src="../img/manta_screenshoot.png" style="display: block; margin: 0 auto; "/>
+  <img src="../img/manta_screenshoot.png" style="display: block; margin: 0 auto; width:20em; "/>
 </div>
 
 <div class="slide">
@@ -55,17 +55,16 @@
 <div class="slide">
   <h1>Allocation émergente</h1>
  
-  <ul>
-    <li>Avantages</li>
-      <ul>
+   <div class="popup spopup">
+
+      <ul class="positive" >
         <li title="en terme de ressources (temps, energie)" >efficace</li>
         <li title="capacité d'adaptation à la variation d'effectif" >robuste</li>
         <li title="capacité d'adaptation au variation environnemental" >flexible</li>
       </ul>
-    <li>Inconvénients</li>
-      <ul>
+      <ul class="negative">
         <li>non optimale</li>
         <li>zone d'ombre</li>
       </ul>
-  </ul>
+      </div>
 </div>

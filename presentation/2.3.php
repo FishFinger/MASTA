@@ -20,7 +20,7 @@
 
 <div class="slide">
 	<h1>Allocation décentralisée</h1>
-  <img src="img/social-networking.png" style="display: block; margin: 0 auto; width:80%"/>
+  <img src="img/social-networking.png" style="display: block; margin: -3em auto 0 auto; width:100%"/>
 
 </div>
 
