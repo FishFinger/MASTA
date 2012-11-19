@@ -56,9 +56,9 @@
   <ul>
     <li>Avantages</li>
       <ul>
-        <li>efficace</li>
-        <li>robuste</li>
-        <li>flexible</li>
+        <li title="en terme de ressources (temps, energie)" >efficace</li>
+        <li title="capacité d'adaptation à la variation d'effectif" >robuste</li>
+        <li title="capacité d'adaptation au variation environnemental" >flexible</li>
       </ul>
     <li>Inconvénients</li>
       <ul>
