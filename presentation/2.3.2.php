@@ -2,12 +2,12 @@
 	<h1>Allocation décentralisée</h1>
   <h2>Réseau contractuel [Smith 1979]</h2>
   
-  <div class="incremental" style="background-color:white"> 
+  <div class="incremental clem_style" style="background-color:white"> 
     
-      <img src="img/contractuel_1.png" alt="" style="background:white; width:25em; position: absolute; right: 5em; top: 5em;" /> 
-      <img src="img/contractuel_2.png" alt="" style="background:white; width:25em; position: absolute; right: 5em; top: 5em;" /> 
-      <img src="img/contractuel_3.png" alt="" style="background:white; width:25em; position: absolute; right: 5em; top: 5em;" /> 
-      <img src="img/contractuel_4.png" alt="" style="background:white; width:25em; position: absolute; right: 5em; top: 5em;" /> 
+      <img src="img/contractuel_1.png" alt="" /> 
+      <img src="img/contractuel_2.png" alt="" /> 
+      <img src="img/contractuel_3.png" alt="" /> 
+      <img src="img/contractuel_4.png" alt="" /> 
 
    
 	</div> 
