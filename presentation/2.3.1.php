@@ -140,15 +140,15 @@
 	<h1>Allocation par réseau d'accointance</h1>
   <h2>Allocation directe</h2>
   
-  <div class="incremental" 
+  <div class="incremental clem_style" 
 	 style="float:right; margin: 0 5em; width:25em"> 
-	  <img src="img/accointances_1.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-	  <img src="img/accointances_2.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-	  <img src="img/accointances_3.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-    <img src="img/accointances_4.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-	  <img src="img/accointances_5.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-	  <img src="img/accointances_6.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
-	  <img src="img/accointances_7.png" alt="" style="width:25em; position: absolute; right: 5em; top: 5em;" /> 
+	  <img src="img/accointances_1.png" alt="" /> 
+	  <img src="img/accointances_2.png" alt="" /> 
+	  <img src="img/accointances_3.png" alt="" /> 
+    <img src="img/accointances_4.png" alt="" /> 
+	  <img src="img/accointances_5.png" alt="" /> 
+	  <img src="img/accointances_6.png" alt="" /> 
+	  <img src="img/accointances_7.png" alt="" /> 
 
 	</div> 
 
