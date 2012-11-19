@@ -8,6 +8,8 @@
 	
 	<link rel="stylesheet" href="styles/slidy.css" type="text/css" />
 	<link rel="stylesheet" href="styles/w3c-blue.css" type="text/css" />
+  <link rel="stylesheet" href="styles/misc.css" type="text/css" />
+
 
 	<script src="scripts/slidy.js" charset="utf-8" type="text/javascript"></script>
 </head>
