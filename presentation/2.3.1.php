@@ -377,12 +377,11 @@
    <div class="popup spopup">
 
       <ul class="positive" >
-        <li title="capacité d'adaptation au variation environnemental" >flexible</li>
-        <li title="temps, coût" >gestion de critères complexes</li>
-
+        <li title="" >robuste</li>
+        <li title="mise à jour des accointances" >flexible</li>
       </ul>
       <ul class="negative">
-        <li title="mise à jour des accointances" >pas très flexible</li>
+        <li> coûteux en message (en cas de délégation) </li>
       </ul>
     </div>
     </div>
