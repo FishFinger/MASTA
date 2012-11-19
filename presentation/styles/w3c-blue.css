@@ -29,7 +29,7 @@ div.slide.titlepage h1 {
 
 div.slide {
   z-index: 20;
-  margin: 2.1em 0 0 0em;
+  margin: 3.7em 0 0 0em;
   padding: 0;
   border-width: 0;
   top: 0;
@@ -40,9 +40,9 @@ div.slide {
   background-color: transparent;
 }
 
-div.background {
+div.background, div.frontground {
   z-index: 1;
-  position: absolute;
+  position: fixed;
   vertical-align: bottom;
   left: 0;
   right: 0;
@@ -55,7 +55,11 @@ div.background {
   background-color: #728ec2;
 }
 
-div.background h1 {
+div.frontground {
+  z-index: 100 !important;
+}
+
+div.background h1, div.frontground h1 {
   padding-left: 1.5em;
   padding-right: 3em;
   padding-top: 0.1em;
@@ -63,9 +67,8 @@ div.background h1 {
   margin-top: -0.05em;
   margin-left: 0;
   margin-right: 0;
-  min-height: 2.3em;
   color: white;
-  height: 2.2em;
+  width:100%;
   font-size: 1.6em;
   line-height: 1.1em;
 }
@@ -82,6 +85,7 @@ div.slide h1 {
  /* position: relative;
   left: 4em;
   top: 2.1em;*/
+  z-index:100;
   padding-left: 1em;
   padding-right: 3em;
   padding-top: 0.2em;
@@ -94,6 +98,9 @@ div.slide h1 {
   line-height: 1.2em;
   color: #728EC2;
   background:  #C3CDE3;
+  position:fixed;
+  width:100%;
+  top:2.2em;
 }
 
 div.slide h1 a {
