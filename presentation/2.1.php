@@ -15,7 +15,7 @@
 
 <div class="slide">
 	<h1>Allocation émergente</h1>
-  <img src="../img/emerge.png" style="float:right; width:30em; margin-right:12%"/>
+  <img src="img/emerge.png" style="float:right; width:30em; margin-right:12%"/>
 
   <ul>
     <li>Agents réactifs</li>
@@ -27,14 +27,14 @@
   <h1>Allocation émergente</h1>
   <h2>Présentation du projet MANTA <span class="bib">[Drogoul 1993]</span></h2>
   
-  <img src="../img/manta_screenshoot.png" style="display: block; margin: 0 auto; width:20em; "/>
+  <img src="img/manta_screenshoot.png" style="display: block; margin: 0 auto; width:20em; "/>
 </div>
 
 <div class="slide">
   <h1>Allocation émergente</h1>
   <h2>Présentation du projet MANTA <span class="bib">[Drogoul 1993]</span></h2>
   
-  <img src="../img/manta_specialisation.png" style="float:right; margin-right:12%" />
+  <img src="img/manta_specialisation.png" style="float:right; margin-right:12%" />
 
   <ul>
     <li>3 groupes d'agents</li>

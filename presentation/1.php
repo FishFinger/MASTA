@@ -51,9 +51,9 @@
 	</table>
 	</div>
 	<div class="popup spopup">
-			<h2>Enjeux</h2>
-			<li style="font-weight:bold;color:green">Autonomie</li>
-			<li style="font-weight:bold;color:orange">Organisation collective</li>
+			<h2>Deux caractéristiques</h2>
+			<p style="font-weight:bold;color:green">Autonomie</p>
+			<p style="font-weight:bold;color:orange">Organisation collective</p>
         </div>
 	</div>
 </div>
