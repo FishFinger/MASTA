@@ -15,7 +15,12 @@
 
 <div class="slide">
 	<h1>Allocation émergente</h1>
-  <img src="img/emerge.png" style="float:right; width:30em; margin-right:12%"/>
+  
+  <div class="incremental clem_style" >
+    <img src="img/emerge_1.png" style="width:30em; top: 1em;"/>
+    <img src="img/emerge_2.png" style="width:30em; top: 1em;"/>
+    <img src="img/emerge_3.png" style="width:30em; top: 1em;"/>
+  </div>
 
   <ul class="incremental">
     <li>Agents réactifs</li>
