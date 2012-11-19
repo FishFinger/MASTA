@@ -11,7 +11,7 @@
 <div class="slide">
 	<h1>Plan</h1>
 		<div class="vbox"></div>
-	<div class="hbox" style="height: auto;">
+	<div class="hbox" style="margin-top: 2em; height: auto;">
 	<ul>
 		<li><b><u>Problématique</u></b></li>
     <li>Allocation émergente</li>
