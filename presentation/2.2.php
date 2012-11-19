@@ -20,9 +20,8 @@
 
 <div class="slide">
 	<h1>Allocation centralisée - Système hierarchique</h1>
-  <h2>Système hierarchique</h2>
+  <h2>Système hiérarchique</h2>
 <img alt="" src="img/hierarchique.png" style="float:right;width:20em;margin-right:2em" />
-  <h3>Fonctionnement</h3>
   <ul>
     <li>Structure hiérarchique</li>
     <li>Organisation prédéfinie et fixe</li>
