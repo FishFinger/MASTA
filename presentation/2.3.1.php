@@ -206,6 +206,8 @@
 	  <img src="img/accointances_deleg_3.png" alt="" /> 
     <img src="img/accointances_deleg_4.png" alt="" /> 
 	  <img src="img/accointances_deleg_5.png" alt="" /> 
+    <img src="img/accointances_deleg_6.png" alt="" /> 
+
 
 	</div> 
       <img src="img/accointances_deleg_1.png" style="float:right; margin: 1.3em 5em; width:25em"/>
