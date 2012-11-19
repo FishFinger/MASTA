@@ -373,4 +373,18 @@
     </table>
   </div>
   
+  <div class=" incremental">
+   <div class="popup spopup">
+
+      <ul class="positive" >
+        <li title="capacité d'adaptation au variation environnemental" >flexible</li>
+        <li title="temps, coût" >gestion de critères complexes</li>
+
+      </ul>
+      <ul class="negative">
+        <li title="mise à jour des accointances" >pas très flexible</li>
+      </ul>
+    </div>
+    </div>
+  
 </div>
