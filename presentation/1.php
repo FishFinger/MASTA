@@ -1,7 +1,7 @@
 <div class="slide">
 	<h1>GMIN334</h1>
 	<div style="text-align:center">
-	<h2>Présentation Sociétés Virtuelles</h2>
+	<h2 class="fullendadre">Présentation Sociétés Virtuelles</h2>
 	<p><span>Université Montpellier 2</span></p>
 	<p><span style="font-style:italic">Thibaut Marmin - Clément Sipieter</span></p>
 	<p>Mardi 20 Novembre 2012</p>
@@ -24,7 +24,7 @@
 	
 <div class="slide">
 	<h1>Problématique - Contexte</h1>
-	<h3>Domaines d'application des SMA</h3>
+	<h2>Domaines d'application des SMA</h2>
 	<table style="width:95%;height:70%;text-align:center;" title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
 		<tr>
 			<td>Agent cognitif</td>
@@ -59,7 +59,7 @@
 <div class="slide">
 	<h1>Problématique - Contexte</h1>
 
-	<h3>Coopération</h3>
+	<h2>Coopération</h2>
 
 <!--
 Bouquin pas ferber
@@ -94,7 +94,7 @@ Bouquin pas ferber
 	<h1>Problématique - Définition</h1>
 	<div class="incremental">
 		<div style="max-width:48%;position:absolute;">
-			<h3>Question</h3>
+			<h2>Question</h2>
 			<ul class="incremental">
 				<li>Qui doit faire quoi ?</li>
 				<li>et avec quels moyens ?</li>
@@ -108,7 +108,7 @@ Bouquin pas ferber
 			</ul>
 		</div>
 		<div style="max-width:48%;float:right">
-			<h3>Besoins pour l'allocation de tâches</h3>
+			<h2>Besoins pour l'allocation de tâches</h2>
 			<ol class="incremental">
 				<li>Décomposer une tâche</li>
 				<li>Définition de rôles</li>
@@ -120,7 +120,7 @@ Bouquin pas ferber
 
 <div class="slide decompo">
 	<h1>Problématique - Besoin n°1</h1>
-	<h3>Décomposer une tâche</h3>
+	<h2>Décomposer une tâche</h2>
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
 		<li>Minimiser la coordination</li>
@@ -136,7 +136,7 @@ Bouquin pas ferber
 
 <div class="slide">
 	<h1>Problématique - Besoin n°2</h1>
-	<h3>Définition des rôles</h3>
+	<h2>Définition des rôles</h2>
 	<div class="incremental" 
 	 style="margin: auto; position: relative; width:20em;"> 
 	  <img src="img/agent-agent.png" alt="" 
@@ -152,15 +152,15 @@ Bouquin pas ferber
 
 <div class="slide">
 	<h1>Problématique - Besoin n°3</h1>
-	<h3>Système d'allocation</h3>
+	<h2>Système d'allocation</h2>
 	<div class="vbox"></div>
 	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em">
-		<h2>Allocation émergente</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation émergente</p>
 	</div>
 	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;">
-		<h2>Allocation centralisée</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation centralisée</p>
 	</div>
 	<div class="hbox" style="height:auto;text-align:center;">
-		<h2>Allocation décentralisée</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation décentralisée</p>
 	</div>
 </div>

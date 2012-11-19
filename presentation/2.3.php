@@ -1,19 +1,20 @@
 <div class="slide">
 	<h1>Allocation décentralisée</h1>
-	<h3>Système d'allocation</h3>
+	<h2>Système d'allocation</h2>
 	<div class="vbox"></div>
 	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;opacity:0.3;color:gray">
-		<h2>Allocation émergente</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation émergente</p>
 	</div>
 	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;opacity:0.3;color:gray">
-		<h2>Allocation centralisée</h2>
+		<p style="font-size:1.3em;font-weight:bold">Allocation centralisée</p>
 	</div>
 	<div class="hbox" style="height:auto;text-align:center;">
-		<h2>Allocation décentralisée</h2>
-		<ul style="background: none;">
+		<p style="font-size:1.3em;font-weight:bold">Allocation décentralisée
+		<ul style="margin-top:-1em;">
 			<li style="background: none;margin:0;padding:0">Réseau d'accointance</li>
 			<li style="background: none;margin:0;padding:0">Réseau contractuel</li>
 		</ul>
+		</p>
 	</div>
 </div>
 
