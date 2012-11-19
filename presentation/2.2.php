@@ -74,6 +74,21 @@
 
 <div class="slide">
   <h1>Allocation centralisée - Système par médiateur</h1>
+  <h2>Pour / Contre</h2>
+  <h3>+</h3>
+  <ul>
+    <li>Cohérence</li>
+    <li>Facile</li>
+  </ul>
+  <h3>-</h3>
+  <ul style="color:brown">
+    <li>Scalabilité</li>
+    <li>Défaillance</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Allocation centralisée - Système par médiateur</h1>
   <h2>Variantes</h2>
   <p>Notion de niveau de compétence</p>
   <div class="incremental">
