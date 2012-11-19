@@ -1,7 +1,7 @@
 <div class="slide">
 	<h1>GMIN334</h1>
 	<div style="text-align:center">
-	<h2>Projet Sociétés Virtuelles</h2>
+	<h2>Présentation Sociétés Virtuelles</h2>
 	<p><span>Université Montpellier 2</span></p>
 	<p><span style="font-style:italic">Thibaut Marmin - Clément Sipieter</span></p>
 	<p>Mardi 20 Novembre 2012</p>
@@ -10,18 +10,20 @@
 
 <div class="slide">
 	<h1>Plan</h1>
-	
-	<ol>
+		<div class="vbox"></div>
+	<div class="hbox" style="height: auto;">
+	<ul>
 		<li><b><u>Problématique</u></b></li>
     <li>Allocation émergente</li>
     <li>Allocation centralisée</li>
     <li>Allocation décentralisée</li>
-		<li>Applications</li>
-	</ol>
+    <li>Conclusion</li>
+	</ul>
+	</div>
 </div>
 	
 <div class="slide">
-	<h1>Problématique</h1>
+	<h1>Problématique - Contexte</h1>
 	<h3>Domaines d'application des SMA</h3>
 	<table style="width:95%;height:70%;text-align:center;" title="Énumération des différents types d'agents page 21 : http://www-desir.lip6.fr/~briot/cv/sommaire-ic2-sma01.pdf">
 		<tr>
@@ -55,6 +57,7 @@
 	</table>
 </div>
 <div class="slide">
+	<h1>Problématique - Contexte</h1>
 
 	<h3>Coopération</h3>
 
@@ -82,12 +85,13 @@ Bouquin pas ferber
 			<p style="font-style:italic;margin-top:-1em">Besoin fort de communcations entre agents.</p></li>
 		<li title="p. 400">Collaboration
 			<p>Permet la réalisation d'une unique tâche par plusieurs agents.</p>
-			<p style="font-style:italic;margin-top:-1em">Systèmes de répartition des tâches.</p></li>
+			<p style="font-style:italic;margin-top:-1em">Système de répartition des tâches.</p></li>
+		</li>
 	</ul>
 </div>
 
 <div class="slide">
-	<h1>Problématique</h1>
+	<h1>Problématique - Définition</h1>
 	<div class="incremental">
 		<div style="max-width:48%;position:absolute;">
 			<h3>Question</h3>
@@ -108,14 +112,14 @@ Bouquin pas ferber
 			<ol class="incremental">
 				<li>Décomposer une tâche</li>
 				<li>Définition de rôles</li>
-				<li>Systèmes d'allocation</li>
+				<li>Système d'allocation</li>
 			</ol>
 		</div>
 	</div>
 </div>
 
 <div class="slide decompo">
-	<h1>Problématique</h1>
+	<h1>Problématique - Besoin n°1</h1>
 	<h3>Décomposer une tâche</h3>
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
@@ -131,15 +135,32 @@ Bouquin pas ferber
 </div>
 
 <div class="slide">
-	<h1>Problématique</h1>
+	<h1>Problématique - Besoin n°2</h1>
 	<h3>Définition des rôles</h3>
 	<div class="incremental" 
-	 style="margin-left: 4em; position: relative"> 
-	  <img src="img/client-fournisseur.png" alt="" 
+	 style="margin: auto; position: relative; width:20em;"> 
+	  <img src="img/agent-agent.png" alt="" 
 	   style="position: static; vertical-align: bottom;width:20em"/> 
+	  <img src="img/client-fournisseur.png" alt="" 
+	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	  <img src="img/fournisseur-client.png" alt="" 
 	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	  <img src="img/fournisseur-mediateur-client.png" alt="" 
 	    style="position: absolute; left: 0; top: 0;width:20em" /> 
 	</div> 
+</div>
+
+<div class="slide">
+	<h1>Problématique - Besoin n°3</h1>
+	<h3>Système d'allocation</h3>
+	<div class="vbox"></div>
+	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em">
+		<h2>Allocation émergente</h2>
+	</div>
+	<div class="hbox" style="height:auto;text-align:center;margin-bottom:1em;">
+		<h2>Allocation centralisée</h2>
+	</div>
+	<div class="hbox" style="height:auto;text-align:center;">
+		<h2>Allocation décentralisée</h2>
+	</div>
 </div>
