@@ -1,6 +1,6 @@
 <div class="slide">
 	<h1>Allocation décentralisée</h1>
-  <h2>Réseau contractuel [Smith 1979]</h2>
+  <h2>Réseau contractuel <span class="bib">[Smith 1979]</span></h2>
   
   <div class="incremental clem_style" style="background-color:white"> 
     

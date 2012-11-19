@@ -17,7 +17,7 @@
     <li>Allocation émergente</li>
     <li>Allocation centralisée</li>
     <li>Allocation décentralisée</li>
-    <li>Conclusion</li>
+    <li>Projet</li>
 	</ul>
 	</div>
 </div>
@@ -95,7 +95,7 @@ Bouquin pas ferber
 	<h1>Problématique - Définition</h1>
 	<div class="incremental">
 		<div style="max-width:48%;position:absolute;">
-			<h2>Question</h2>
+			<h2>Question <span class="bib">[FERBER 1995]</span></h2>
 			<ul class="incremental">
 				<li>Qui doit faire quoi ?</li>
 				<li>et avec quels moyens ?</li>
@@ -121,7 +121,7 @@ Bouquin pas ferber
 
 <div class="slide decompo">
 	<h1>Problématique - Besoin n°1</h1>
-	<h2>Décomposer une tâche</h2>
+	<h2>Décomposer une tâche <span class="bib">[Bond & Gasser 1988]</span> <span class="bib">[Gasser & Hill 1990]</span></h2>
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
 		<li>Minimiser la coordination</li>

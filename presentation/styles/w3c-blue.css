@@ -248,6 +248,12 @@ h3 {
   font-size: 1em;
 }
 
+.bib{
+  font-weight: normal;
+  color: gray;
+  font-size: 0.6em;
+}
+
 ul.positive, ul.negative {
     padding: 0 0 0 2em;
     background-position: left center;

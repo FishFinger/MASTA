@@ -1,5 +1,5 @@
 <div class="slide">
-	<h1>Conclusion</h1>
+	<h1>Projet</h1>
 	
 </div>
 
