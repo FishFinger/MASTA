@@ -1,7 +1,7 @@
 <div class="slide">
-	<h1>GMIN334</h1>
-	<div style="text-align:center">
-	<h2 class="fullendadre">Présentation Sociétés Virtuelles</h2>
+	<h1>GMIN334 - Sociétés virtuelles</h1>
+	<div style="text-align:center;border:2px solid silver;margin-top:5em;background-color:#F0F0F0;border-left:none;border-right:none">
+	<h2 style="border:none;">Allocations de tâches dans les SMA</h2>
 	<p><span>Université Montpellier 2</span></p>
 	<p><span style="font-style:italic">Thibaut Marmin - Clément Sipieter</span></p>
 	<p>Mardi 20 Novembre 2012</p>
@@ -125,10 +125,9 @@ Bouquin pas ferber
 	<p><b>Contrainte</b> : avoir des tâches indépendantes</p>
 	<ul>
 		<li>Minimiser la coordination</li>
-		<li>Diminuer la quantité d'informations échangée</li>
 		<li>Éviter les conflits</li>
-		
 	</ul>
+	<p>Diminuer la quantité d'informations échangée</p>
 </div>
 
 <div class="background decompo" style="height:100%;top:2.1em;background:none;">
