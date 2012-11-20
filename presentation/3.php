@@ -7,10 +7,10 @@
     <ul>
      <li>Tâches :</li>
      <ul>
-         <li>agriculteur</li>
-         <li>éleveur</li>
-         <li>bûcheron</li>
-         <li>constructeur</li>
+         <li>Agriculteur</li>
+         <li>Éleveur</li>
+         <li>Bûcheron</li>
+         <li>Constructeur</li>
         </ul>
     </ul>
         
@@ -27,14 +27,14 @@
 </li>
      <ul>
         <li>Réseau d'accointance</li>
-        <li>Appels d'offre</li>
+        <li>Appel d'offre</li>
         <li>Hybride</li>
         <li>Modèle à agent réactif</li>
     </ul>
      <li>Comparaison des Quatre méthodes dans deux situations :</li>
      <ul>
          <li>Sans acquisition de compétences</li>
-         <li>avec acquisition de compétences</li>
+         <li>Avec acquisition de compétences</li>
      </ul>
      
     </ul>

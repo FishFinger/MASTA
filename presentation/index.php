@@ -22,7 +22,7 @@
 <body>
 <div class="frontground">
 	<img alt="" id="head-icon" src="graphics/icon-blue.png" />
-	<h1>Allocations de tâches dans les SMA</h1>
+	<h1>Allocation de tâches dans les SMA</h1>
 </div>
 
 <?php include '1.php' ?>

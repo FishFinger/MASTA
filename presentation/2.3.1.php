@@ -377,11 +377,11 @@
    <div class="popup spopup">
 
       <ul class="positive" >
-        <li title="" >robuste</li>
-        <li title="mise à jour des accointances" >flexible</li>
+        <li title="" >Robuste</li>
+        <li title="mise à jour des accointances" >Flexible</li>
       </ul>
       <ul class="negative">
-        <li> coûteux en message (en cas de délégation) </li>
+        <li> Coûteux en messages (en cas de délégation) </li>
       </ul>
     </div>
     </div>

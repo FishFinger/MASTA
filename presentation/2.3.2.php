@@ -16,7 +16,7 @@
             <img src="img/contractuel_2.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
        
       </ol>
     </div>
@@ -25,7 +25,7 @@
             <img src="img/contractuel_3.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
         <li>Envoi de propositions</li>
        
       </ol>
@@ -34,9 +34,9 @@
             <img src="img/contractuel_4.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
         <li>Envoi de propositions</li>
-        <li>attribution du contrat</li>
+        <li>Attribution du contrat</li>
       </ol>
     </div>
      
@@ -44,10 +44,10 @@
             <img src="img/contractuel_5.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
         <li>Envoi de propositions</li>
-        <li>attribution du contrat</li>
-        <li>acquittement du contrat</li>
+        <li>Attribution du contrat</li>
+        <li>Acquittement du contrat</li>
       </ol>
     </div>
      
@@ -56,9 +56,9 @@
             <img src="img/contractuel_6.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
         <li>Envoi de propositions</li>
-        <li>attribution du contrat</li>
+        <li>Attribution du contrat</li>
       </ol>
     </div>
     
@@ -66,10 +66,10 @@
             <img src="img/contractuel_7.png" alt="" style="float: right; width:25em; margin:2em;"/> 
 
       <ol style="margin-left:3em;">
-        <li>Appel d'offres</li>
+        <li>Appel d'offre</li>
         <li>Envoi de propositions</li>
-        <li>attribution du contrat</li>
-        <li>acquittement du contrat</li>
+        <li>Attribution du contrat</li>
+        <li>Acquittement du contrat</li>
       </ol>
     </div>
      

@@ -1,7 +1,7 @@
 <div class="slide">
 	<h1>GMIN334 - Sociétés virtuelles</h1>
 	<div style="text-align:center;border:2px solid silver;margin-top:5em;background-color:#F0F0F0;border-left:none;border-right:none">
-	<h2 style="border:none;">Allocations de tâches dans les SMA</h2>
+	<h2 style="border:none;">Allocation de tâches dans les SMA</h2>
 	<p><span>Université Montpellier 2</span></p>
 	<p><span style="font-style:italic">Thibaut Marmin - Clément Sipieter</span></p>
 	<p>Mardi 20 Novembre 2012</p>

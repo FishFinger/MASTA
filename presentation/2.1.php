@@ -17,9 +17,9 @@
 	<h1>Allocation émergente</h1>
   
   <div class="incremental clem_style" >
-    <img src="img/emerge_1.png" style="width:30em; top: 1em;"/>
-    <img src="img/emerge_2.png" style="width:30em; top: 1em;"/>
-    <img src="img/emerge_3.png" style="width:30em; top: 1em;"/>
+    <img src="img/emerge_1.png" style="width:30em; top: 1em;background-color:transparent;"/>
+    <img src="img/emerge_2.png" style="width:30em; top: 1em;background-color:transparent;"/>
+    <img src="img/emerge_3.png" style="width:30em; top: 1em;background-color:transparent;"/>
   </div>
 
   <ul class="incremental">
@@ -32,14 +32,14 @@
   <h1>Allocation émergente</h1>
   <h2>Présentation du projet MANTA <span class="bib">[Drogoul 1993]</span></h2>
   
-  <img src="img/manta_screenshoot.png" style="float:right; width:20em; margin-right:12% "/>
+  <img src="img/manta_screenshoot.png" style="float:right; width:20em; margin-right:1emsss "/>
   
   <ul>
     <li>3 groupes d'agents</li>
       <ul>
-        <li>les assistés (oeufs, larves, cocons)</li>
-        <li>les assistants (reines, ouvrières, mâles)</li>
-        <li>les autres (nourriture, cadavre, …)</li>
+        <li>Les assistés<p style="font-style:italic;margin:0">(oeufs, larves, cocons)</p></li>
+        <li>Les assistants <p style="font-style:italic;margin:0">(reines, ouvrières, mâles)</p></li>
+        <li>Les autres <p style="font-style:italic;margin:0">(nourriture, cadavre, …)</p></li>
       </ul>
     <li>3 types de tâches</li>
       <ul>
@@ -71,13 +71,13 @@
    <div class="popup spopup">
 
       <ul class="positive" >
-        <li title="en terme de ressources (temps, energie)" >efficace</li>
-        <li title="capacité d'adaptation à la variation d'effectif" >robuste</li>
-        <li title="capacité d'adaptation au variation environnemental" >flexible</li>
+        <li title="en terme de ressources (temps, energie)" >Efficace</li>
+        <li title="capacité d'adaptation à la variation d'effectif" >Robuste</li>
+        <li title="capacité d'adaptation au variation environnemental" >Flexible</li>
       </ul>
       <ul class="negative">
-        <li>non optimale</li>
-        <li>zone d'ombre</li>
+        <li>Non optimale</li>
+        <li>Zones d'ombre</li>
       </ul>
     </div>
 </div>
