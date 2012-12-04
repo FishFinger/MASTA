@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Simulation Name="MySimulation" 
+			Description="Turtles switching between 2 behaviors: Lazy - turtle emits myPheromone, Speedy - turtle moves"
+			Width="150" Height="150" TorusMode="true" Refresh="100" CellSize="3" CyclePause="50">
+		<Flavors>
+			<Flavor Name="myPheromone" Evaporation="0.07" Diffusion = "0.33"/>
+		</Flavors>
+		<Agents>
+			<Agent AgentClass="mysimulation.MyTurtle" NbAgents="1000">
+        			 <Parameters speed="3"/>
+			 </Agent>
+		</Agents>
+		<Viewers>
+			<Viewer ViewerClass="mysimulation.MyViewer" CellSize="3"/>
+		</Viewers>
+		<Observers>
+		</Observers>
+</Simulation>

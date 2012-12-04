@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<!--Multi Agent System for Task allocation-->
+	
+<simulation name="MASTA">
+	<environment width="1200" height="600" torusMode="false"/>
+	<pheromone name="sea"/>
+	<pheromone name="grass"/>
+	
+	<turtle class="edu.turtlekit2.masta.Sheep" number="100" />
+	<turtle class="edu.turtlekit2.masta.Human" number="10">
+  			 <parameters vision="30"/>
+	</turtle>
+	
+	<observer class="edu.turtlekit2.masta.MastaViewer"/>
+	<observer class="edu.turtlekit2.masta.Environnement" 
+		percent_point="0.0001" 
+		nb_point_for_interpolation="6"
+		/>
+
+	<observer class="edu.turtlekit2.masta.SheepEnergieObserver" />
+	<observer class="edu.turtlekit2.tools.chart.LineCharter" role="Sheep,Human"/>
+		
+	
+</simulation>
