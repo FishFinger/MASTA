@@ -24,11 +24,13 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JComponent;
 import javax.swing.event.MouseInputListener;
@@ -102,26 +104,38 @@ public class Viewer extends Observer implements MouseInputListener, MouseWheelLi
 		g.fillRect(x,y,cellS,cellS);
 	}
 
+	private Image world;
 	public void paintInfo(Graphics g){
 
-		if(redrawAll){
-			redrawAll = false;
-			for (int i=envWidth-1; i >=0 ; i--)
-				for (int j=envHeight-1; j >=0; j--)
-					paintPatch(g, patchGrid[i][j],(i*cellSize) + xDecay,((envHeight-j-1)*cellSize)+yDecay,cellSize);
-		}else
-			for (int i=envWidth-1; i >=0 ; i--)
-				for (int j=envHeight-1; j >=0; j--)
-					if (patchGrid[i][j].change ){
-						paintPatch(g, patchGrid[i][j],(i*cellSize) + xDecay,((envHeight-j-1)*cellSize)+yDecay,cellSize);
-					}
+		if (world == null || this.redrawAll)
+			this.world = this.createWorld();
+		
+		g.drawImage(this.world, xDecay, yDecay, envWidth*cellSize, envHeight*cellSize, null);
 
 		Turtle[] turtles = allTurtles.getTurtles();		
 		for(int i=turtles.length-1;i>=0;i--)
-		{
 			if (turtles[i] != null && ! turtles[i].hidden)
 				paintTurtle(g,turtles[i],(turtles[i].xcor()*cellSize)+xDecay,((envHeight-turtles[i].ycor()-1)*cellSize)+yDecay,cellSize);
-		}
+		
+		
+		this.redrawAll = false;
+	}
+	
+	protected Image createWorld()
+	{
+		Image img = new BufferedImage(envWidth*cellSize,envHeight*cellSize,BufferedImage.TYPE_INT_RGB);
+		Graphics2D g2d = (Graphics2D)img.getGraphics();
+		
+		for (int i=envWidth-1; i >=0 ; i--)
+			for (int j=envHeight-1; j >=0; j--)
+				paintPatch(g2d, patchGrid[i][j],(i*cellSize),((envHeight-j-1)*cellSize),cellSize);
+	
+		Turtle[] turtles = allTurtles.getTurtles();		
+		for(int i=turtles.length-1;i>=0;i--)
+			if (turtles[i] != null && turtles[i].hidden)
+				paintTurtle(g2d,turtles[i],(turtles[i].xcor()*cellSize)+xDecay,((envHeight-turtles[i].ycor()-1)*cellSize)+yDecay,cellSize);
+		
+		return img;
 	}
 
 	/**the display itself*/

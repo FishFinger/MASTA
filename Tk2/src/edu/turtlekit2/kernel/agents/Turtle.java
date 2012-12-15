@@ -486,7 +486,11 @@ public class Turtle extends AbstractAgent implements ReferenceableAgent
 		}
 	/**set the value of the corresponding patch variable*/
 	public  void emit(final String variableName,final double value){if(position!=null)position.incrementPatchVariable(variableName,value);}
-	public  void incrementPatchVariableAt(final String variableName,final double value,final int a,final int b){if(position!=null) world.grid[normeValue(a+xcor(),world.x)][normeValue(b+ycor(),world.y)].incrementPatchVariable(variableName,value);}
+	public  void incrementPatchVariableAt(final String variableName,final double value,final int a,final int b)
+	{
+		if(position!=null) 
+			world.grid[normeValue(a+xcor(),world.x)][normeValue(b+ycor(),world.y)].incrementPatchVariable(variableName,value);
+		}
 	/** get a mark deposed on the patch
 	@return the corresponding java object, null if not present*/
 	public  Object getMark(final String variableName){return position != null ? position.getMark(variableName) : null;}
