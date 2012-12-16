@@ -3,7 +3,7 @@ package masta.agents.animals.humans;
 import java.awt.Color;
 
 import edu.turtlekit2.kernel.agents.Turtle;
-import masta.StockableThing;
+import masta.Resource;
 import masta.agents.AAgent;
 import masta.agents.animals.Animal;
 import masta.agents.animals.sheep.Sheep;
@@ -28,7 +28,7 @@ public class HumanMind {
 
 	protected void findJob()
 	{
-		float stock_meat = this.agent.getHut().getStock(StockableThing.MEAT);
+		/*float stock_meat = this.agent.getHut().getStock(StockableThing.MEAT);
 		float stock_fruit = this.agent.getHut().getStock(StockableThing.FRUIT);
 		float stock_wood = this.agent.getHut().getStock(StockableThing.WOOD);
 		
@@ -37,7 +37,7 @@ public class HumanMind {
 		else if(stock_fruit >= stock_meat && stock_fruit >= stock_wood)
 			this.agent.setJob(Human.Job.GATHERER);
 		else
-			this.agent.setJob(Human.Job.WOODCUTTER);
+			this.agent.setJob(Human.Job.WOODCUTTER);*/
 		
 		/*this.setColor(Color.black);
 		wiggle();
@@ -47,6 +47,8 @@ public class HumanMind {
 				if(this.findJob(x,r))
 					break;
 			}*/
+		
+		this.agent.setJob(this.agent.getHut().giveJob());
 					
 	}
 		

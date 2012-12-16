@@ -2,8 +2,12 @@
 package masta.agents.animals.humans;
 
 import java.awt.Color;
+import java.util.LinkedList;
 
-import masta.StockableThing;
+import javax.media.j3d.Link;
+
+import masta.Job;
+import masta.Resource;
 import masta.agents.AAgent;
 import masta.agents.animals.Animal;
 import masta.agents.animals.AnimalBody;
@@ -15,18 +19,8 @@ import edu.turtlekit2.kernel.agents.Turtle;
 
 public class Human extends Animal
 {
-
-	private static final long serialVersionUID = 2274910957067261405L;
 	
-	protected HumanBody body;
-	protected HumanMind mind;
-	
-	protected Hut hut = null;
-	protected Job current_job = Job.NONE;
-
-	protected float hunter_level = 1;	
-	protected float gatherer_level = 1;	
-	protected float woodcutter_level = 1;
+	public static LinkedList<Human> allHumans = new LinkedList<>();
 	
 	//*************************************************************************
 	//	CONSTRUCTORS
@@ -35,11 +29,13 @@ public class Human extends Animal
 	public Human()
 	{
 		super();
+		allHumans.add(this);
 	}
 
 	public void setup()
 	{
 		super.setup();
+		this.setupJobProp();
 		this.setColor(Color.pink);
 		this.playRole("Human");
 
@@ -52,25 +48,40 @@ public class Human extends Animal
 		this.setDimension(3, 7);
 	} 
 	
+	protected void setupJobProp()
+	{
+		for(Job j: Job.values())
+		{
+			this.job_exp[j.ordinal()] = 1f;
+			this.job_exp_step[j.ordinal()] = 0.01f;
+		}
+		
+		this.job_exp_step[Job.HUNTER.ordinal()] = 0.1f;
+
+	}
+	
 	//*************************************************************************
 	//	METHODS
 	//*************************************************************************
 
 	public void update()
 	{
-		this.eat();
+		//this.eat();
+		
+		if(job != null)
+			this.setColor(this.job.getColor());
+		
+		if(this.getBody().isHeavy())
+			this.setState(State.RETURN2HUT);
+		
 		if(this.hut == null)
 		{
 			if(!this.mind.lookForHut())
 				this.wiggle();
 		}
-		else if(this.getBody().isHeavy())
-		{
-			this.setJob(Job.RETURN2HUT);
-		}
 		else
 		{
-			switch(current_job)
+			switch(state)
 			{
 			case HUNTER:
 				this.hunterUpdate();
@@ -95,7 +106,6 @@ public class Human extends Animal
 	protected void hunterUpdate()
 	{
 		// look for meat
-		this.setColor(Color.red);
 		Animal prey = this.mind.locatePrey();
 		if (prey != null)
 		{
@@ -104,10 +114,14 @@ public class Human extends Animal
 			if(distance <= hunter_level)
 			{
 				this.getBody().incrStock(
-								StockableThing.MEAT,
-								prey.getEnergie()
+								Resource.MEAT,
+								Math.min(
+										prey.getEnergie(),
+										this.body.getMaxPortableWeight()
+										)
 								);
 				prey.die();
+				this.incrExp(Job.WOODCUTTER);
 			}
 			else
 			{
@@ -129,26 +143,32 @@ public class Human extends Animal
 	protected void gathererUpdate()
 	{
 		// look for fruits
-		this.setColor(Color.pink);
-		this.goTowardsPatchVar("berry");
-		float berry_level = (float)this.smell("berry");
-		if(berry_level > 0)
+		float berry_qty = (float)this.smell("berry");
+		if(berry_qty > 0f)
 		{
-			this.getBody().incrStock(StockableThing.FRUIT, berry_level);
-			this.incrementPatchVariableAt("berry", -berry_level, 0, 0);
+			this.getBody().incrStock(Resource.FRUIT, this.gatherer_level);
+			this.incrementPatchVariableAt("berry", -this.gatherer_level, 0, 0);
+			this.incrExp(Job.GATHERER);
+		}
+		else
+		{
+			this.goTowardsPatchVar("berry");
 		}
 	}
 
 	protected void woodcutterUpdate()
 	{
 		// look for wood
-		this.setColor(Color.green);
-		this.goTowardsPatchVar("wood");
-		float wood_level = (float)this.smell("wood");
-		if(wood_level > 0)
+		float wood_qty = (float)this.smell("wood");
+		if(wood_qty > 0f)
 		{
-			this.getBody().incrStock(StockableThing.WOOD, wood_level);
-			this.incrementPatchVariableAt("wood", -wood_level, 0, 0);
+			this.getBody().incrStock(Resource.WOOD, this.woodcutter_level);
+			this.incrementPatchVariableAt("wood", -this.woodcutter_level, 0, 0);
+			this.incrExp(Job.WOODCUTTER);
+		}
+		else
+		{
+			this.goTowardsPatchVar("wood");
 		}
 	}
 	
@@ -156,8 +176,8 @@ public class Human extends Animal
 	{
 		if(this.distance(this.getHut()) < 10)
 		{
-			//this.shareResources();
-			this.setJob(Job.NONE);
+			this.dropResources();
+			this.setJob(this.job);
 		}
 		this.setHeading(this.towards(this.getHut().x, this.getHut().y));
 		this.fd();
@@ -171,41 +191,49 @@ public class Human extends Animal
 			this.getBody().eatMeat();
 	}
 	
-	protected void shareResources()
+	protected void dropResources()
 	{
-		float qty_min = 300f;
-		int thing = StockableThing.MEAT;
-		if(this.getBody().getStock(thing) > qty_min)
+		for(Resource r: Resource.values())
 		{
-			this.getHut().incrStock(thing, this.getBody().getStock(thing) - qty_min);
-			this.getBody().setStock(thing, qty_min);
+			this.getHut().incrStock(r, this.body.getStock(r));
+			this.body.setStock(r, 0);
 		}
-		
-		thing = StockableThing.FRUIT;
-		if(this.getBody().getStock(thing) > qty_min)
-		{
-			this.getHut().incrStock(thing, this.getBody().getStock(thing) - qty_min);
-			this.getBody().setStock(thing, qty_min);
-		}
-		
-		thing = StockableThing.WOOD;
-		this.getHut().incrStock(thing, this.getBody().getStock(thing));
-		this.getBody().setStock(thing, 0f);
 	}
-
 	
 	//******************************************************************
 	//	GETTERS / SETTERS
 	//******************************************************************
 
+	public State getState()
+	{
+		return this.state;
+	}
+	
+	protected void setState(State state)
+	{
+		this.state = state;
+	}
+	
 	public Job getJob()
 	{
-		return this.current_job;
+		return this.job;
 	}
 	
 	protected void setJob(Job job)
 	{
-		this.current_job = job;
+		this.job = job;
+		switch(job)
+		{
+		case GATHERER:
+			this.state = State.GATHERER;
+			break;
+		case HUNTER:
+			this.state = State.HUNTER;
+			break;
+		case WOODCUTTER:
+			this.state = State.WOODCUTTER;
+			break;
+		}
 	}
 	
 	public Hut getHut()
@@ -216,6 +244,11 @@ public class Human extends Animal
 	protected void setHut(Hut hut)
 	{
 		this.hut = hut;
+	}
+	
+	protected void incrExp(Job job)
+	{
+		this.job_exp[job.ordinal()] += this.job_exp_step[job.ordinal()];
 	}
 	
 	//******************************************************************
@@ -231,19 +264,42 @@ public class Human extends Animal
 	@Override
 	public void die()
 	{
+		// humans never die
+		/*allHumans.remove(this);
 		if(this.hut != null)
 			this.hut.removeAnInhabitant(this);
 		
-		super.die();
+		super.die();*/
 	}
+	
+	//******************************************************************
+	//	ATTRIBUTS
+	//******************************************************************
+
+	private static final long serialVersionUID = 2274910957067261405L;
+	
+	protected HumanBody body;
+	protected HumanMind mind;
+	
+	protected Hut hut = null;
+	protected State state = State.DEFAULT;
+	protected Job job = null;
+	
+	protected float job_exp[] = new float[Job.values().length];
+	protected float job_exp_step[] = new float[Job.values().length];
+
+
+	protected float hunter_level = 1;	
+	protected float gatherer_level = 1;	
+	protected float woodcutter_level = 1;
 	
 	//******************************************************************
 	//	PRIVATE CLASS
 	//******************************************************************
 	
-	protected enum Job
+	protected enum State
 	{
-		NONE, GATHERER, HUNTER, WOODCUTTER, RETURN2HUT;
+		DEFAULT, GATHERER, HUNTER, WOODCUTTER, RETURN2HUT;
 	}
 }
 

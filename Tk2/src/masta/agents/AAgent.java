@@ -1,12 +1,13 @@
 package masta.agents;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.util.LinkedList;
 
 import javax.vecmath.Point2i;
 
-import masta.World;
+import masta.world.World;
 
 import edu.turtlekit2.kernel.agents.Turtle;
 
@@ -93,5 +94,23 @@ public abstract class AAgent extends Turtle{
 	}
 	
 	public abstract boolean isMovable();
+	
+	public void paint(Graphics g, int x, int y, int cell_size)
+	{
+		Image img = this.getImage();
+		if(img != null)
+		{
+			int width = img.getWidth(null)*cell_size;
+			int height = img.getHeight(null)*cell_size;
+			int posX = x - (width - cell_size)/2;
+			int posY = y - (height - cell_size)/2;
+			g.drawImage(img, posX, posY, width, height, null);
+		}
+		else
+		{
+			g.setColor(this.getColor());
+			g.fillRect(x,y,cell_size*this.getWidth(),cell_size*this.getHeight());
+		}
+	}
 	
 }

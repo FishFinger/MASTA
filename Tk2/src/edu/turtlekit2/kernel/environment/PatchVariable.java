@@ -41,18 +41,21 @@ final public class PatchVariable
 		this.name=name;
 		System.err.println("New Flavor: " + name);
 	}
+	
 	final public void setEvapCoef(double evapCoef)
 	{
 		if (evapCoef<0 || evapCoef>1)
 			System.err.println("You should set correctly the evapCoef (0<=ec<=1)");
 		evaporation=evapCoef;
 	}
+	
 	final public void setDiffuseCoef(double diffuseCoef)
 	{
 		if (diffuseCoef<0 || diffuseCoef>1)
 			System.err.println("You should set correctly the diffuseCoef (0<=ec<=1)");
 		diffCoef=diffuseCoef;
 	}
+	
 	final public void setDefaultValue(double defaultValue)
 	{
 		defaultV= defaultValue;

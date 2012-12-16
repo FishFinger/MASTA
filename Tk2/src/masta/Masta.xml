@@ -2,29 +2,23 @@
 	<!--Multi Agent System for Task allocation-->
 	
 <simulation name="MASTA">
-	<environment width="1200" height="600" torusMode="false"/>
-	
-	<pheromone name="sea"/>
-	<pheromone name="grass"/>
-	<pheromone name="wood"/>
-	<pheromone name="berry" />
+	<environment class="masta.world.World" width="1200" height="600" torusMode="false"/>
 	
 	<pheromone name="temperature" diffusion="0.25" evaporation="0.02" />
+	<pheromone name="sea"/>
+	<pheromone name="grass"/>
+	<pheromone name="berry" />
+	<pheromone name="wood" />
 	
-	<turtle class="masta.agents.things.Hut" number="25" />	
 	
-	<turtle class="masta.agents.animals.sheep.Sheep" number="200" />
-	<turtle class="masta.agents.animals.humans.Human" number="50" >
+	<turtle class="masta.agents.things.Hut" 			number="10" />	
+	<turtle class="masta.agents.animals.sheep.Sheep" 	number="200" />
+	<turtle class="masta.agents.animals.humans.Human" 	number="50" >
   			 <parameters vision="100"/>
 	</turtle>
 	
-	<observer class="masta.MastaViewer"/>
-	<observer class="masta.Environnement" 
-		point_percent="0.0002" 
-		berry_percent="0.3"
-		berry_max="100"
-		nb_point_for_interpolation="5"
-		/>
+	<observer class="masta.world.WorldView" />
+	<observer class="masta.world.WorldCtrl" />
 
 	<observer class="masta.charts.EnergieChart" role="Human" />
 	<observer class="masta.charts.EnergieChart" role="Sheep" />

@@ -16,83 +16,74 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package masta; 
+package masta.world; 
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import javax.vecmath.Point3i;
 
+import masta.agents.animals.humans.Human;
+import masta.agents.things.Hut;
+
 import edu.turtlekit2.kernel.agents.Observer;
+import edu.turtlekit2.kernel.agents.Turtle;
 import edu.turtlekit2.kernel.environment.Patch;
+import edu.turtlekit2.kernel.environment.PatchVariable;
+import edu.turtlekit2.kernel.environment.TurtleEnvironment;
 
-/** 
- * Adapted from the termites simulation of TurtleKit (v1). 
- * @author G.Beurier
- * @version 1.1 - 4/2010
- * 
- * 
- * The only goal of this Observer is to setup the patches for 
-	the termite simulation, having its variables: patchGrid, EnvWidth, EnvHeight
-
-  @author Fabien MICHEL
-  @version 1.0 20/3/2000 */
 
 @SuppressWarnings("serial")
-public class Environnement extends Observer
+public class World extends TurtleEnvironment
 {
-	private float sea_level = 0.3f;
+	private float sea_level = 0.15f;
 	private float wood_level = 0.6f;
 	
 	private boolean fast_starting = true;
 
-	private float berry_percent;
-	private float berry_max;
+	private float berry_percent = 0.3f; 
+	private float berry_max = 100;
+	private float wood_max = 500;
 	
-	private float point_percent;
-	private int nb_point_for_interpolation;
+	private float point_percent = 0.0001f;//0.0003f
+	private int nb_point_for_interpolation = 3;
 	
 	int step = -1;
+	
+	private static World instance;
 
-	public Environnement() {}
+	public World() 
+	{
+		World.instance = this;
+	}
+	
+	public static World getInstance()
+	{
+		return World.instance;
+	}
 	
 	public void setup()
 	{	
-		if(!fast_starting)
-		{
-			point_percent = this.getAttrib().getFloat(("point_percent"));
-			nb_point_for_interpolation = this.getAttrib().getInt("nb_point_for_interpolation");
-		}
-		else
-		{
-			point_percent = 0.0001f;
-			nb_point_for_interpolation = 3;
-		}
-		this.println(point_percent+"--"+nb_point_for_interpolation);
 		
-		this.berry_percent = this.getAttrib().getFloat(("berry_percent"));
-		this.berry_max = this.getAttrib().getFloat(("berry_max"));
-
-		
-		int nb_patch = (envWidth+1)*(envHeight+1);
+		int nb_patch = this.getWidth()*this.getHeight();
 		int percent_loaded = 0;
 		int old_percent_loaded = 0;
 
-		
 		this.println("Initialisation");
 		
-		
 		LinkedList<Point3i> list = new LinkedList<Point3i>();
-		for(int i=0;i<envWidth;i++)
-			for(int j=0;j<envHeight;j++)
+		for(int i=0; i<this.getWidth(); ++i)
+			for(int j=0; j<this.getHeight(); ++j)
 			{
 				if (!fast_starting)
 				{
-					if (i == 0 || i == (envWidth - 1))
+					if (i == 0 || i == (this.getWidth() - 1))
 					{
 						if (j % 30 == 0)
 							list.add(new Point3i(i,j,0));
 					}
-					else if (j == 0 || j == (envHeight - 1))
+					else if (j == 0 || j == (this.getHeight() - 1))
 					{
 						if (i % 30 == 0)
 							list.add(new Point3i(i,j,0));
@@ -105,22 +96,40 @@ public class Environnement extends Observer
 		
 		
 		
-		for(int i=0;i<envWidth;i++)
-			for(int j=0;j<envHeight;j++)
+		for(int i=0;i<getWidth();i++)
+			for(int j=0;j<getHeight();j++)
 			{
-				this.computeVar(this.patchGrid[i][j], (float)interpolation(list, i, j, nb_point_for_interpolation)/1000.f);
+				this.computeVar(this.grid[i][j], (float)interpolation(list, i, j, nb_point_for_interpolation)/1000.f);
 
 				//mise à jour pourcentage chargement
-				percent_loaded = ((envHeight+1)*i + j)/(nb_patch/100);
+				percent_loaded = ((getHeight()+1)*i + j)/(nb_patch/100);
 				if (percent_loaded > old_percent_loaded)
 				{	
 					old_percent_loaded = percent_loaded;
 					this.println( percent_loaded + "%");
-
 				}
 			}
+		
+		this.humansRepartition();
 
 	}			
+	
+	private void humansRepartition()
+	{
+		Iterator<Hut> it = Hut.allHuts.iterator();
+		Hut hut = null;
+		for(Human h: Human.allHumans)
+		{
+			if(!it.hasNext())
+				it = Hut.allHuts.iterator();
+				
+			hut = it.next();
+				
+			
+			hut.addAnInhabitant(h);
+			h.setXY(hut.xcor(), hut.ycor());
+		}
+	}
 	
 	private void computeVar(Patch p, float level)
 	{
@@ -129,12 +138,13 @@ public class Environnement extends Observer
 		else
 			p.setPatchVariable("grass", 100.0 * (0.10f*Math.random() + (1.f - this.sea_level) - (level-this.sea_level)));
 	
-		if (level > this.wood_level)
-		{
-			p.setPatchVariable("wood", 1.0);
-			if(Math.random() < this.berry_percent)
-				p.setPatchVariable("berry", this.berry_max * Math.random());
-		}
+		  if (level > this.wood_level)
+		  {
+			  p.setPatchVariable("wood", 1.0);
+			  if(Math.random() < this.berry_percent)
+				  p.setPatchVariable("berry", this.berry_max * Math.random());
+		  }
+
 	}
 	
 	//@todo need use of QuadTree or other similar structure
@@ -199,21 +209,6 @@ public class Environnement extends Observer
 		return value;
 	}
 	
-	public void watch()
-	{
-		super.watch();
-		
-		++step;
-		
-		if(step % 100 == 0)
-		{
-			for(int i=0;i<envWidth;i++)
-				for(int j=0;j<envHeight;j++)
-				{
-					this.patchGrid[i][j].incrementPatchVariable("grass", 1);
-				}
-		}
-	}
 				
 	
 	

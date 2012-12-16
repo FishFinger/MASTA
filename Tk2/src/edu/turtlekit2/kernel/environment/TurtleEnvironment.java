@@ -63,12 +63,14 @@ public class TurtleEnvironment extends AbstractAgent implements ReferenceableAge
 	}
 	
 	final public void initialize(final int width, final int height) {
-		x = width;
-		y = height;
-		grid = new Patch[x][y];
+		this.x = width;
+		this.y = height;
+		this.grid = new Patch[x][y];
 		initGrid();
 		fillGrid();
 	}
+	
+	public void setup(){};
 	
 	/*
 	 * Override this method to fill the environment
@@ -77,12 +79,8 @@ public class TurtleEnvironment extends AbstractAgent implements ReferenceableAge
 	}
 
 	public final void initialize(final int width, final int height, final boolean torusMode) {
-		x = width;
-		y = height;
-		wrap = torusMode;
-		grid = new Patch[x][y];
-		initGrid();
-		fillGrid();
+		this.initialize(width, height);
+		wrap = torusMode;		
 	}
 
 	public void displayOff(){
@@ -104,7 +102,7 @@ public class TurtleEnvironment extends AbstractAgent implements ReferenceableAge
 			{
 				final double[] val = new double[values.length];
 				for(int k=0;k<var.length;k++) val[k]=values[k];
-				grid[i][j].variableValue = val;
+				grid[i][j].variableValue = val; // @todo values.clone()?
 			}
 	}
 
@@ -353,5 +351,15 @@ public class TurtleEnvironment extends AbstractAgent implements ReferenceableAge
 			clearVariable(((PatchVariable)(volatileVariables.get(i))).getName());
 			System.out.println((volatileVariables.get(i)).getName());
 		} 
+	}
+	
+	public int getWidth()
+	{
+		return this.x;
+	}
+	
+	public int getHeight()
+	{
+		return this.y;
 	}
 }

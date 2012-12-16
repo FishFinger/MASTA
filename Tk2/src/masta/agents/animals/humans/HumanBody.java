@@ -1,7 +1,7 @@
 package masta.agents.animals.humans;
 
 import masta.agents.animals.AnimalBody;
-import masta.StockableThing;
+import masta.Resource;
 
 public class HumanBody extends AnimalBody 
 {
@@ -25,23 +25,23 @@ public class HumanBody extends AnimalBody
 	public boolean isHeavy() 
 	{
 		float weight = 0;
-		for (int i=0; i<StockableThing.getMaxIndex(); ++i)
-			weight += this.getStock(i);
+		for (Resource r: Resource.values())
+			weight += this.getStock(r);
 		
-		return weight > this.getMaxPortableWeight();
+		return weight >= this.getMaxPortableWeight();
 	}
 	
 	public void eatMeat()
 	{
-		float qty = Math.min(this.stock[StockableThing.MEAT], (float)this.mounthful_qty); 
-		this.stock[StockableThing.MEAT] -= qty;
+		float qty = Math.min(this.getStock(Resource.MEAT), (float)this.mounthful_qty); 
+		this.incrStock(Resource.MEAT, -qty);
 		this.protein += qty;
 	}
 	
 	protected void eatFruit()
 	{
-		float qty = Math.min(this.stock[StockableThing.FRUIT], (float)this.mounthful_qty); 
-		this.stock[StockableThing.FRUIT] -= qty;
+		float qty = Math.min(this.getStock(Resource.FRUIT), (float)this.mounthful_qty); 
+		this.incrStock(Resource.FRUIT, -qty);
 		this.fiber += qty;
 	}
 	
@@ -63,19 +63,19 @@ public class HumanBody extends AnimalBody
 		this.agent = a;
 	}
 	
-	protected float getStock(int thing)
+	protected float getStock(Resource resource)
 	{
-		return this.stock[thing];
+		return this.stock[resource.ordinal()];
 	}
 	
-	protected void setStock(int thing, float value)
+	protected void setStock(Resource resource, float value)
 	{
-		this.stock[thing] = value;
+		this.stock[resource.ordinal()] = value;
 	}
 	
-	protected void incrStock(int thing, float value)
+	protected void incrStock(Resource resource, float value)
 	{
-		this.stock[thing] += value;
+		this.stock[resource.ordinal()] += value;
 	}
 	
 	protected float getMaxPortableWeight()
@@ -124,13 +124,13 @@ public class HumanBody extends AnimalBody
 
 	private float strength_level = 1;
 	
-	private float[] stock = new float[StockableThing.getMaxIndex()];
+	private float[] stock = new float[Resource.values().length];
 
 
 	//*************************************************************************
 	//	CONSTANTS
 	//*************************************************************************
 	
-	private static final float STRENGTH2WEIGHT_COEFF = 1000f;
+	private static final float STRENGTH2WEIGHT_COEFF = 100f;
 
 }

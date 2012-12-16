@@ -1,6 +1,7 @@
 package masta.agents.things;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 
 import java.io.File;
@@ -10,25 +11,25 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.media.j3d.WakeupOrOfAnds;
 
-import masta.StockableThing;
+import masta.Job;
+import masta.Resource;
 import masta.agents.AAgent;
 import masta.agents.FixedAgent;
 import masta.agents.animals.humans.Human;
 
 public class Hut extends FixedAgent
 {
-
-	private static Image hut_img = null;
 	
-	private int inhabitant_max_nbr = 20;
-	private List<Human> inhabitant_list;
-	
-	protected float[] stock = new float[3];
+	//*************************************************************************
+	//	CONSTRUCTORS
+	//*************************************************************************
 	
 	public Hut()
 	{
 		super();
+		allHuts.add(this);
 		
 		if(hut_img == null)
 		{
@@ -51,27 +52,13 @@ public class Hut extends FixedAgent
 		super.setup();
 		this.setColor(Color.black);
 		this.setDimension(15, 15);
-		this.setHidden(true);
 		this.playRole("Hut");
 	}
 	
-	@Override
-	protected void beforeUpdateTest() {
-		if(this.smell("sea") > 0)
-			this.die();
-	}
+	//*************************************************************************
+	//	METHODS
+	//*************************************************************************
 
-	@Override
-	protected void update() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	protected void afterUpdateTest() {
-		// TODO Auto-generated method stub
-
-	}
 	
 	public boolean isFull()
 	{
@@ -94,21 +81,100 @@ public class Hut extends FixedAgent
 		return this.inhabitant_list.remove(h);
 	}
 	
-	
+	public Job giveJob()
+	{
+		switch(++job_state % 3)
+		{
+		case 0:
+			return Job.GATHERER;
+		case 1: 
+			return Job.HUNTER;
+		case 2:
+			return Job.WOODCUTTER;
+		}
+		
+		return null;
+	}
 
 	//*************************************************************************
 	//	GETTERS / SETTERS
 	//*************************************************************************
 	
-	public float getStock(int thing) 
+	public float getStock(Resource resource) 
 	{
-		return stock[thing];
+		return stock[resource.ordinal()];
 	}
 
-	public void incrStock(int thing, float stock) 
+	public void incrStock(Resource resource, float stock) 
 	{
-		this.stock[thing] += stock;
+		this.stock[resource.ordinal()] += stock;
 	}
 
+	//*************************************************************************
+	//	OVERRIDE METHODS
+	//*************************************************************************
 	
+	@Override
+	protected void beforeUpdateTest() {
+		if(this.smell("sea") > 0)
+			this.die();
+	}
+
+	@Override
+	protected void update() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void afterUpdateTest() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	@Override
+	public void die()
+	{
+		allHuts.remove(this);
+		super.die();
+	}
+	
+	@Override
+	public void paint(Graphics g, int x, int y, int cell_size)
+	{
+		super.paint(g,x,y,cell_size);
+		
+		int bar_height;
+		for(Job j: Job.values())
+		{
+			g.setColor(j.getColor());
+			bar_height = (int)(cell_size * (this.getStock(j.getResource())/100));
+			g.fillRect(
+					x+(j.ordinal()*2) - this.getWidth(),
+					y - bar_height + this.getHeight(),
+					cell_size*2,
+					bar_height
+				);
+		}
+		
+	}
+	
+
+	//*************************************************************************
+	//	ATTRIBUTS METHODS
+	//*************************************************************************
+	
+	private static final long serialVersionUID = -1712079622696858987L;
+
+	private static Image hut_img = null;
+	
+	private int inhabitant_max_nbr = 20;
+	private List<Human> inhabitant_list;
+	
+	protected float[] stock = new float[Resource.values().length];
+	
+	public static LinkedList<Hut> allHuts = new LinkedList<>();
+	
+	private int job_state = 0;
+
 }

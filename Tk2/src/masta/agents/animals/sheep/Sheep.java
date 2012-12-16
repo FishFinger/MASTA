@@ -44,7 +44,7 @@ public class Sheep extends Animal
 	public void setup()
 	{
 		super.setup();
-		this.body = new SheepBody(this, 100, 10);
+		this.body = new SheepBody(this, 100, 5);
 		
 		this.getBody().setVision(5f);
 		this.fertility_rate = 0.0005f;
@@ -66,9 +66,14 @@ public class Sheep extends Animal
 	public void update() 
 	{		
 		this.lookForGrass();
-		this.body.eat(this.getPatchAt(0, 0), "grass");
+		if(this.getEnergie() < this.getEnergieMax())
+			this.body.eat(this.getPatchAt(0, 0), "grass");
 	}
 	
+	private float getEnergieMax() {
+		return 500f;
+	}
+
 	public void lookForGrass()
 	{
 		if(Math.random() > 0.1)
