@@ -13,9 +13,6 @@
 	
 	<turtle class="masta.agents.things.Hut" 			number="10" />	
 	<turtle class="masta.agents.animals.sheep.Sheep" 	number="200" />
-	<turtle class="masta.agents.animals.humans.Human" 	number="50" >
-  			 <parameters vision="100"/>
-	</turtle>
 	
 	<observer class="masta.world.WorldView" />
 	<observer class="masta.world.WorldCtrl" />

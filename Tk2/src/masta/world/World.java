@@ -110,26 +110,8 @@ public class World extends TurtleEnvironment
 				}
 			}
 		
-		this.humansRepartition();
 
 	}			
-	
-	private void humansRepartition()
-	{
-		Iterator<Hut> it = Hut.allHuts.iterator();
-		Hut hut = null;
-		for(Human h: Human.allHumans)
-		{
-			if(!it.hasNext())
-				it = Hut.allHuts.iterator();
-				
-			hut = it.next();
-				
-			
-			hut.addAnInhabitant(h);
-			h.setXY(hut.xcor(), hut.ycor());
-		}
-	}
 	
 	private void computeVar(Patch p, float level)
 	{

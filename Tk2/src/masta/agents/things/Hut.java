@@ -53,6 +53,13 @@ public class Hut extends FixedAgent
 		this.setColor(Color.black);
 		this.setDimension(15, 15);
 		this.playRole("Hut");
+		
+		Human h;
+		for(int i=0; i<10; ++i)
+		{
+			h = new Human();
+			this.createTurtle(h);
+		}
 	}
 	
 	//*************************************************************************
