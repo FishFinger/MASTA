@@ -107,14 +107,17 @@ public class Viewer extends Observer implements MouseInputListener, MouseWheelLi
 	private Image world;
 	public void paintInfo(Graphics g){
 		
-		//this.print("print info");
-		
-		if (world == null || this.redrawAll)
-			this.world = this.createWorld();
-		
-		g.drawImage(this.world, xDecay, yDecay, envWidth*cellSize, envHeight*cellSize, null);
-
+		for (int i=envWidth-1; i >=0 ; i--)
+			for (int j=envHeight-1; j >=0; j--)
+				paintPatch(g, patchGrid[i][j],(i*cellSize),((envHeight-j-1)*cellSize),cellSize);
+				
 		Turtle[] turtles = allTurtles.getTurtles();		
+		for(int i=turtles.length-1;i>=0;i--)
+			if (turtles[i] != null && turtles[i].hidden)
+				paintTurtle(g,turtles[i],(turtles[i].xcor()*cellSize)+xDecay,((envHeight-turtles[i].ycor()-1)*cellSize)+yDecay,cellSize);
+		
+		
+		turtles = allTurtles.getTurtles();		
 		for(int i=turtles.length-1;i>=0;i--)
 			if (turtles[i] != null && ! turtles[i].hidden)
 				paintTurtle(g,turtles[i],(turtles[i].xcor()*cellSize)+xDecay,((envHeight-turtles[i].ycor()-1)*cellSize)+yDecay,cellSize);
@@ -123,23 +126,6 @@ public class Viewer extends Observer implements MouseInputListener, MouseWheelLi
 		this.redrawAll = false;
 	}
 	
-	protected Image createWorld()
-	{
-		Image img = new BufferedImage(envWidth*cellSize,envHeight*cellSize,BufferedImage.TYPE_INT_RGB);
-		Graphics2D g2d = (Graphics2D)img.getGraphics();
-		
-		for (int i=envWidth-1; i >=0 ; i--)
-			for (int j=envHeight-1; j >=0; j--)
-				paintPatch(g2d, patchGrid[i][j],(i*cellSize),((envHeight-j-1)*cellSize),cellSize);
-	
-		Turtle[] turtles = allTurtles.getTurtles();		
-		for(int i=turtles.length-1;i>=0;i--)
-			if (turtles[i] != null && turtles[i].hidden)
-				paintTurtle(g2d,turtles[i],(turtles[i].xcor()*cellSize)+xDecay,((envHeight-turtles[i].ycor()-1)*cellSize)+yDecay,cellSize);
-		
-		return img;
-	}
-
 	/**the display itself*/
 	public void display(){
 		//		if(onScreen.isShowing() && readyToDisplay())

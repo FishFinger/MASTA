@@ -65,8 +65,8 @@ public class EnergieChart extends Viewer
 		chart = new ChartWindow();
 		chart.addChart(chart_name, "Step", "Energie");
 		
-		chart.addSerie(chart_name, "AVG");
 		chart.addSerie(chart_name, "MIN");
+		chart.addSerie(chart_name, "AVG");
 		chart.addSerie(chart_name, "MAX");
 		
 		this.sendMessage(Tk2Launcher.COMMUNITY, getSimulationGroup(), "UIManager",

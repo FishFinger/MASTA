@@ -53,7 +53,7 @@ public class Human extends Animal
 		for(Job j: Job.values())
 		{
 			this.job_exp[j.ordinal()] = 1f;
-			this.job_exp_step[j.ordinal()] = 0.01f;
+			this.job_exp_step[j.ordinal()] = 0.001f;
 		}
 		
 		this.job_exp_step[Job.HUNTER.ordinal()] = 0.1f;
@@ -108,10 +108,7 @@ public class Human extends Animal
 			{
 				this.getBody().incrStock(
 								Resource.MEAT,
-								Math.min(
-										prey.getEnergie(),
-										this.body.getMaxPortableWeight()
-										)
+								prey.decrEnergie(this.body.getMaxPortableWeight())
 								);
 				prey.die();
 				this.incrExp(Job.HUNTER);

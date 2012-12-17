@@ -40,7 +40,7 @@ public class World extends TurtleEnvironment
 	private float sea_level = 0.05f;
 	private float wood_level = 0.6f;
 	
-	private boolean fast_starting = true;
+	private boolean fast_starting = false;
 
 	private float berry_percent = 0.3f; 
 	private float berry_max = 100;
@@ -122,7 +122,9 @@ public class World extends TurtleEnvironment
 	
 		  if (level > this.wood_level)
 		  {
-			  p.setPatchVariable("wood", 1.0);
+			  if(p.x%7==0 && p.y%7==0)
+				  p.setPatchVariable("wood", this.wood_max * Math.random());
+			  
 			  if(Math.random() < this.berry_percent)
 				  p.setPatchVariable("berry", this.berry_max * Math.random());
 		  }

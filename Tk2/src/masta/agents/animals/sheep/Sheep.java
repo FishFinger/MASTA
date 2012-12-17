@@ -34,8 +34,9 @@ public class Sheep extends Animal
 {
 
 	private static final long serialVersionUID = -8609891987504272728L;
-	private static Image sheep_img = null;
-
+	private static Image sheep_img, dead_sheep_img;
+	private boolean alive = true;
+	
 	public Sheep()
 	{
 		super();
@@ -52,6 +53,7 @@ public class Sheep extends Animal
 		if(sheep_img == null)
 			try {
 				sheep_img = ImageIO.read(new File("/home/clement/m2/masta/Tk2/src/masta/img/sheep.png"));
+				dead_sheep_img = ImageIO.read(new File("/home/clement/m2/masta/Tk2/src/masta/img/sheep_dead.png"));
 			} catch (IOException e) {}
 		
 		this.setImage(sheep_img);
@@ -61,13 +63,24 @@ public class Sheep extends Animal
 		this.playRole("Sheep");
 	}
 	
+	public void die()
+	{
+		this.setImage(Sheep.dead_sheep_img);
+		alive = false;
+		if(this.getEnergie() <= 0)
+			super.die();		
+	}
+	
 	//******************************************************************
 
 	public void update() 
 	{		
-		this.lookForGrass();
-		if(this.getEnergie() < this.getEnergieMax())
-			this.body.eat(this.getPatchAt(0, 0), "grass");
+		if(alive)
+		{
+			this.lookForGrass();
+			if(this.getEnergie() < this.getEnergieMax())
+				this.body.eat(this.getPatchAt(0, 0), "grass");
+		}
 	}
 	
 	private float getEnergieMax() {
@@ -85,12 +98,13 @@ public class Sheep extends Animal
 		else
 			this.wiggle();
 	}
-
+	
 	//******************************************************************
 	//	GETTERS
 	//******************************************************************
 
 	protected SheepBody getBody(){ return this.body; }
+
 	
 	//*************************************************************************
 	//	ATTRIBUTS

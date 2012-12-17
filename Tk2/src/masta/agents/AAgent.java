@@ -77,11 +77,6 @@ public abstract class AAgent extends Turtle{
 	{
 		return dim.getY();
 	}
-	
-	public void die()
-	{
-		super.die();
-	}
 
 	public Color getColor()
 	{

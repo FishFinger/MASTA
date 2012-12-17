@@ -37,6 +37,7 @@ class SheepBody extends AnimalBody
 	public float useEnergie(float qty) {
 		return (this.energie -= qty);
 	}
+	
 
 	@Override
 	public float getEnergie() {

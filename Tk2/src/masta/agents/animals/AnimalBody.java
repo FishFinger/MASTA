@@ -26,6 +26,10 @@ public abstract class AnimalBody
 		this.getAgent().fd((int)this.getSpeed());
 	}
 	
+	public float decrEnergie(float qty)
+	{
+		return this.useEnergie(Math.min(this.getEnergie(), qty));
+	}
 	
 	//*************************************************************************
 	//	GETTERS/SETTERS

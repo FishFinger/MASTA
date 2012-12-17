@@ -215,11 +215,11 @@ public class Hut extends FixedAgent
 		for(Job j: Job.values())
 		{
 			g.setColor(j.getColor());
-			bar_height = (int)(cell_size * (this.getStock(j.getResource())/100));
+			bar_height = (int)(cell_size * (this.getStock(j.getResource())/200));
 			g.fillRect(
-					x+(j.ordinal()*2) - this.getWidth(),
+					x+(j.ordinal()*cell_size) - this.getWidth(),
 					y - bar_height + this.getHeight(),
-					cell_size*2,
+					cell_size,
 					bar_height
 				);
 		}
@@ -252,6 +252,6 @@ public class Hut extends FixedAgent
 	public static LinkedList<Hut> allHuts = new LinkedList<>();
 	
 	private int job_state = 0;
-	private AllocMod alloc_mod = AllocMod.AFFINITY;
+	private AllocMod alloc_mod = AllocMod.MIN_BEFORE;
 
 }

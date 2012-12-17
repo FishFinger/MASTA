@@ -31,6 +31,11 @@ public abstract class Animal extends MovableAgent {
 	//	PUBLIC METHODS
 	//*************************************************************************
 	
+	public float decrEnergie(float qty)
+	{
+		return this.getBody().decrEnergie(qty);
+	}
+	
 	public void fd()
 	{
 		this.getBody().fd();
@@ -56,101 +61,46 @@ public abstract class Animal extends MovableAgent {
 	
 	public void goTowardsPatchVar(String patch_var)
 	{
-		int vision = (int)this.getVision();
-		if( vision % 2 != 0)
-			vision += 1;
 		
-		int demi_vision = vision/2;
-		
-		int var_qty = 0;
-		int[] dir_qty = new int[9];
-		
-		// compute value for each direction
-		for(int x=-vision; x<=vision; ++x)
-			for(int y=-vision; y<=vision; ++y)
+		Patch p;	
+		for(int r=1; r<= (int)this.getVision(); ++r)
+		{
+			for(int x=-r; x<=r; x++)
+			{
+				p = this.getPatchAt(x, r);
+				if(p.smell(patch_var) > 0)
 				{
-					var_qty = (int)this.getPatchAt(x, y).smell(patch_var);
-					
-					if(x<=0 && y>=0) // NW
-						dir_qty[CardinalDirection.NW] += var_qty;
-					else if(x>=0 && y>=0) // NE
-						dir_qty[CardinalDirection.NE] += var_qty;
-					else if(x>=0 && y<=0) // SE
-						dir_qty[CardinalDirection.SE] += var_qty;
-					else if(x<=0 && y<=0) // SW
-						dir_qty[CardinalDirection.SW] += var_qty;
-					
-					// NORTH
-					if(x>=-demi_vision && x<=demi_vision && y>=0)
-						dir_qty[CardinalDirection.NORTH] += var_qty;
-					
-					// SOUTH
-					if(x>=-demi_vision && x<=demi_vision && y<=0) 
-						dir_qty[CardinalDirection.SOUTH] += var_qty;
-					
-					// EAST
-					if(y>=-demi_vision && y<=demi_vision && x>=0) 
-						dir_qty[CardinalDirection.EAST] += var_qty;
-					
-					// WEST
-					if(y>=-demi_vision && y<=demi_vision && x<=0) 
-						dir_qty[CardinalDirection.WEST] += var_qty;
-					
-					// NONE
-					if(x>=-demi_vision && x<=demi_vision 
-							&& y>=-demi_vision && y<=demi_vision)
-						dir_qty[CardinalDirection.NONE] += var_qty;
+					this.setHeading(this.towards(p.x, p.y));
+					this.fd();
+					return;
 				}
-		
-		// FIND MAX @TODO add proba system
-		int angle_dir = 135;
-		var_qty = dir_qty[CardinalDirection.NW];
-		if(dir_qty[CardinalDirection.NE] > var_qty)
-		{
-			angle_dir = 45;
-			var_qty = dir_qty[CardinalDirection.NE];
-		}
-		if(dir_qty[CardinalDirection.SE] > var_qty)
-		{
-			angle_dir = -45;
-			var_qty = dir_qty[CardinalDirection.SE];
-		}
-		if(dir_qty[CardinalDirection.SW] > var_qty)
-		{
-			angle_dir = -135;
-			var_qty = dir_qty[CardinalDirection.SW];
-		}
-		if(dir_qty[CardinalDirection.NORTH] > var_qty)
-		{
-			angle_dir = 90;
-			var_qty = dir_qty[CardinalDirection.NORTH];
-		}
-		if(dir_qty[CardinalDirection.EAST] > var_qty)
-		{
-			angle_dir = 0;
-			var_qty = dir_qty[CardinalDirection.EAST];
-		}
-		if(dir_qty[CardinalDirection.SOUTH] > var_qty)
-		{
-			angle_dir = -90;
-			var_qty = dir_qty[CardinalDirection.SOUTH];
-		}
-		if(dir_qty[CardinalDirection.WEST] > var_qty)
-		{
-			angle_dir = 180;
-			var_qty = dir_qty[CardinalDirection.WEST];
-		}
-		
-		if(dir_qty[CardinalDirection.NONE] > var_qty)
-		{
-			this.wiggle();
-			/*Patch p = this.getPatchWithMaxOf(patch_var, demi_vision);
-			angle_dir = (int)this.towards(p.x, p.y);*/
-		}
-		else
-		{
-			this.setHeading(angle_dir);
-			this.fd((int)this.getSpeed());
+				
+				p = this.getPatchAt(x, -r);
+				if(p.smell(patch_var) > 0)
+				{
+					this.setHeading(this.towards(p.x, p.y));
+					this.fd();
+					return;
+				}
+				
+				p = this.getPatchAt(r, x);
+				if(p.smell(patch_var) > 0)
+				{
+					this.setHeading(this.towards(p.x, p.y));
+					this.fd();
+					return;
+				}
+				
+				p = this.getPatchAt(-r, x);
+				if(p.smell(patch_var) > 0)
+				{
+					this.setHeading(this.towards(p.x, p.y));
+					this.fd();
+					return;
+				}
+				
+			
+			}
 		}
 	}
 	
@@ -168,6 +118,7 @@ public abstract class Animal extends MovableAgent {
 	{ 
 		return this.getBody().getEnergie(); 
 	}
+		
 	
 	public float getSpeed()
 	{
@@ -178,6 +129,7 @@ public abstract class Animal extends MovableAgent {
 	{
 		return this.getBody().getVision();
 	}
+	
 	
 	//*************************************************************************
 	//	PRIVATE METHODS
@@ -217,6 +169,8 @@ public abstract class Animal extends MovableAgent {
 		if(this.smell("sea") > 0)
 			this.moveTo(this.old_xcor, this.old_ycor);
 	}
+	
+	
 	
 }
 
