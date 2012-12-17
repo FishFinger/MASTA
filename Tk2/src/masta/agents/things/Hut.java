@@ -45,6 +45,9 @@ public class Hut extends FixedAgent
 				this.getImage().getWidth(null), 
 				this.getImage().getHeight(null)
 			);
+		
+		this.setHidden(true); // bricolage pour le mettre à jour que tous les 100 tours
+
 	}
 	
 	public void setup()
@@ -55,9 +58,10 @@ public class Hut extends FixedAgent
 		this.playRole("Hut");
 		
 		Human h;
-		for(int i=0; i<10; ++i)
+		for(int i=0; i<inhabitant_max_nbr; ++i)
 		{
 			h = new Human();
+			h.setHut(this);
 			this.createTurtle(h);
 		}
 	}
@@ -88,8 +92,27 @@ public class Hut extends FixedAgent
 		return this.inhabitant_list.remove(h);
 	}
 	
-	public Job giveJob()
+	public Job giveJob(Human h)
 	{
+		switch(alloc_mod)
+		{
+		case STATIC:
+			return staticAlloc(h);
+		case MIN_BEFORE:
+			return minBeforeAlloc(h);
+		case AFFINITY:
+			return affinityAlloc(h);
+		}
+		
+		return null;
+	}
+
+	
+	private Job staticAlloc(Human h)
+	{
+		if(h.getJob() != null)
+			return h.getJob();
+		
 		switch(++job_state % 3)
 		{
 		case 0:
@@ -101,6 +124,43 @@ public class Hut extends FixedAgent
 		}
 		
 		return null;
+	}
+	
+	private Job minBeforeAlloc(Human h)
+	{
+		float min = Float.MAX_VALUE;
+		float cur;
+		Job job = null;
+		for(Job j: Job.values())
+		{
+			cur = this.getStock(j.getResource());
+			if(cur < min || (cur == min && Math.random() <= 0.33))
+			{
+				min = cur;
+				job = j;
+			}				
+		}
+		
+		return job;
+	}
+	
+	private Job affinityAlloc(Human h)
+	{
+		float min = Float.MAX_VALUE;
+		float cur;
+		Job job = null;
+		
+		for(Job j: Job.values())
+		{
+			cur = this.getStock(j.getResource()) / h.getExp(j); // divid by level
+			if(cur < min || (cur == min && Math.random() <= 0.33))
+			{
+				min = cur;
+				job = j;
+			}				
+		}
+		
+		return job;
 	}
 
 	//*************************************************************************
@@ -168,6 +228,15 @@ public class Hut extends FixedAgent
 	
 
 	//*************************************************************************
+	//	PRIVATE CLASS
+	//*************************************************************************
+	
+	private enum AllocMod
+	{
+		STATIC, MIN_BEFORE, AFFINITY;
+	}
+
+	//*************************************************************************
 	//	ATTRIBUTS METHODS
 	//*************************************************************************
 	
@@ -175,7 +244,7 @@ public class Hut extends FixedAgent
 
 	private static Image hut_img = null;
 	
-	private int inhabitant_max_nbr = 20;
+	private int inhabitant_max_nbr = 10;
 	private List<Human> inhabitant_list;
 	
 	protected float[] stock = new float[Resource.values().length];
@@ -183,5 +252,6 @@ public class Hut extends FixedAgent
 	public static LinkedList<Hut> allHuts = new LinkedList<>();
 	
 	private int job_state = 0;
+	private AllocMod alloc_mod = AllocMod.AFFINITY;
 
 }

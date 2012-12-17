@@ -106,7 +106,9 @@ public class Viewer extends Observer implements MouseInputListener, MouseWheelLi
 
 	private Image world;
 	public void paintInfo(Graphics g){
-
+		
+		//this.print("print info");
+		
 		if (world == null || this.redrawAll)
 			this.world = this.createWorld();
 		

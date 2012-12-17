@@ -110,6 +110,8 @@ public class HumanBody extends AnimalBody
 		return this.mounthful_qty;
 	}
 	
+	public void update(){}
+	
 	//*************************************************************************
 	//	ATTRIBUTS
 	//*************************************************************************

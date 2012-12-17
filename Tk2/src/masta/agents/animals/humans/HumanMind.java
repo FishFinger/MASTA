@@ -27,102 +27,39 @@ public class HumanMind {
 	//*************************************************************************
 
 	protected void findJob()
-	{
-		/*float stock_meat = this.agent.getHut().getStock(StockableThing.MEAT);
-		float stock_fruit = this.agent.getHut().getStock(StockableThing.FRUIT);
-		float stock_wood = this.agent.getHut().getStock(StockableThing.WOOD);
-		
-		if (stock_meat >= stock_fruit && stock_meat >= stock_wood)
-			this.agent.setJob(Human.Job.HUNTER);
-		else if(stock_fruit >= stock_meat && stock_fruit >= stock_wood)
-			this.agent.setJob(Human.Job.GATHERER);
-		else
-			this.agent.setJob(Human.Job.WOODCUTTER);*/
-		
-		/*this.setColor(Color.black);
-		wiggle();
-		for(int r=1; r<= vision; ++r)
-			for(int x=-r; x<=r; x++)
-			{
-				if(this.findJob(x,r))
-					break;
-			}*/
-		
-		this.agent.setJob(this.agent.getHut().giveJob());
-					
-	}
-		
-	/*protected boolean findJob(int x, int y)
-	{
-		if(this.locateAgent("Sheep",x,y) != null)
-		{
-			this.current_job = Job.HUNTER;
-			return true;
-		}
-		
-		if(this.smellAt("berry",x,y) > 0)
-		{
-			this.current_job = Job.GATHERER;
-			return true;
-		}
-		
-		return false;
-	}*/
-	
-	protected boolean lookForHut()
-	{
-		Hut tmp_hut = (Hut)locateAgent("Hut",0,0);
-		if(testHut(tmp_hut))
-			return true;
-		
-		for(int r=1; r<= this.agent.getVision(); ++r)
-		{
-			for(int x=-r; x<=r; x++)
-			{
-				tmp_hut = (Hut)locateAgent("Hut",x,r);
-				if(testHut(tmp_hut))
-					return true;	
-				
-				tmp_hut = (Hut)locateAgent("Hut",x,-r);
-				if(testHut(tmp_hut))
-					return true;
-				
-				tmp_hut = (Hut)locateAgent("Hut",r,x);
-				if(testHut(tmp_hut))
-					return true;
-				
-				tmp_hut = (Hut)locateAgent("Hut",-r,x);
-				if(testHut(tmp_hut))
-					return true;
-			}
-		}
-		
-		return false;
+	{	
+		this.agent.setJob(this.agent.getHut().giveJob(this.agent));					
 	}
 	
 	protected Animal locatePrey()
+	{			
+		return (Animal)locateAgent("Sheep");
+	}
+	
+	protected AAgent locateAgent(String role)
 	{
-		Animal prey = null;
+		AAgent agent = null;
 		
-		prey = (Sheep)locateAgent("Sheep", 0,0);
-		if(prey != null)
-			return prey;
+		agent = locateAgent(role, 0,0);
+		if(agent != null)
+			return agent;
+		
 		for(int r=1; r<= (int)this.agent.getVision(); ++r)
 		{
 			for(int x=-r; x<=r; x++)
 			{
-				prey = (Sheep)locateAgent("Sheep", x,r);
-				if(prey != null)
-					return prey;
-				prey = (Sheep)locateAgent("Sheep", x,-r);
-				if(prey != null)
-					return prey;
-				prey = (Sheep)locateAgent("Sheep", r,x);
-				if(prey != null)
-					return prey;
-				prey = (Sheep)locateAgent("Sheep", -r,x);
-				if(prey != null)
-					return prey;
+				agent = locateAgent(role, x,r);
+				if(agent != null)
+					return agent;
+				agent = locateAgent(role, x,-r);
+				if(agent != null)
+					return agent;
+				agent = locateAgent(role, r,x);
+				if(agent != null)
+					return agent;
+				agent = locateAgent(role, -r,x);
+				if(agent != null)
+					return agent;
 			}
 		}
 				

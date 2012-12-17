@@ -44,10 +44,10 @@ public class WorldView extends Viewer
 	public void paintPatch(Graphics g, Patch p,int x,int y,int cellS){
 		
 		 if(p.smell("wood") >= 1)
-			 if(x%15==0 && y%15==0)
+			 if(x%7==0 && y%7==0)
 			 {
-				 int width = tree_img.getWidth(null)*cellS;
-				 int height= tree_img.getHeight(null)*cellS;
+				 int width = tree_img.getWidth(null)*cellS / 2;
+				 int height= tree_img.getHeight(null)*cellS / 2;
 				 g.drawImage(tree_img, x, y, width , height , null);
 			 }
 

@@ -37,7 +37,7 @@ import edu.turtlekit2.kernel.environment.TurtleEnvironment;
 @SuppressWarnings("serial")
 public class World extends TurtleEnvironment
 {
-	private float sea_level = 0.15f;
+	private float sea_level = 0.05f;
 	private float wood_level = 0.6f;
 	
 	private boolean fast_starting = true;
@@ -46,7 +46,7 @@ public class World extends TurtleEnvironment
 	private float berry_max = 100;
 	private float wood_max = 500;
 	
-	private float point_percent = 0.0001f;//0.0003f
+	private float point_percent = 0.002f;//0.0003f
 	private int nb_point_for_interpolation = 3;
 	
 	int step = -1;
@@ -116,7 +116,7 @@ public class World extends TurtleEnvironment
 	private void computeVar(Patch p, float level)
 	{
 		if (level <= this.sea_level)
-			p.setPatchVariable("sea", 255.0 - level*(254.0 / this.sea_level));
+			p.setPatchVariable("sea", 155.0 - level*(154.0 / this.sea_level));
 		else
 			p.setPatchVariable("grass", 100.0 * (0.10f*Math.random() + (1.f - this.sea_level) - (level-this.sea_level)));
 	

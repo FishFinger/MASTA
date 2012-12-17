@@ -45,7 +45,7 @@ public class Human extends Animal
 		this.body.setVision(100f);
 		this.fertility_rate = 0.0005f;
 		
-		this.setDimension(3, 7);
+		this.setDimension(5, 12);
 	} 
 	
 	protected void setupJobProp()
@@ -74,32 +74,25 @@ public class Human extends Animal
 		if(this.getBody().isHeavy())
 			this.setState(State.RETURN2HUT);
 		
-		if(this.hut == null)
+		switch(state)
 		{
-			if(!this.mind.lookForHut())
-				this.wiggle();
+		case HUNTER:
+			this.hunterUpdate();
+			break;
+		case GATHERER:
+			this.gathererUpdate();
+			break;
+		case WOODCUTTER:
+			this.woodcutterUpdate();
+			break;
+		case RETURN2HUT:
+			this.return2hutUpdate();
+			break;
+		default:
+			this.mind.findJob();
+			break;
 		}
-		else
-		{
-			switch(state)
-			{
-			case HUNTER:
-				this.hunterUpdate();
-				break;
-			case GATHERER:
-				this.gathererUpdate();
-				break;
-			case WOODCUTTER:
-				this.woodcutterUpdate();
-				break;
-			case RETURN2HUT:
-				this.return2hutUpdate();
-				break;
-			default:
-				this.mind.findJob();
-				break;
-			}
-		}
+		
 			
 	}
 	
@@ -111,7 +104,7 @@ public class Human extends Animal
 		{
 			int distance = this.distance(prey);
 			
-			if(distance <= hunter_level)
+			if(distance <= this.job_exp[Job.HUNTER.ordinal()])
 			{
 				this.getBody().incrStock(
 								Resource.MEAT,
@@ -121,7 +114,7 @@ public class Human extends Animal
 										)
 								);
 				prey.die();
-				this.incrExp(Job.WOODCUTTER);
+				this.incrExp(Job.HUNTER);
 			}
 			else
 			{
@@ -146,8 +139,8 @@ public class Human extends Animal
 		float berry_qty = (float)this.smell("berry");
 		if(berry_qty > 0f)
 		{
-			this.getBody().incrStock(Resource.FRUIT, this.gatherer_level);
-			this.incrementPatchVariableAt("berry", -this.gatherer_level, 0, 0);
+			this.getBody().incrStock(Resource.FRUIT, this.job_exp[Job.GATHERER.ordinal()]);
+			this.incrementPatchVariableAt("berry", -this.job_exp[Job.GATHERER.ordinal()], 0, 0);
 			this.incrExp(Job.GATHERER);
 		}
 		else
@@ -162,8 +155,8 @@ public class Human extends Animal
 		float wood_qty = (float)this.smell("wood");
 		if(wood_qty > 0f)
 		{
-			this.getBody().incrStock(Resource.WOOD, this.woodcutter_level);
-			this.incrementPatchVariableAt("wood", -this.woodcutter_level, 0, 0);
+			this.getBody().incrStock(Resource.WOOD, this.job_exp[Job.WOODCUTTER.ordinal()]);
+			this.incrementPatchVariableAt("wood", -this.job_exp[Job.WOODCUTTER.ordinal()], 0, 0);
 			this.incrExp(Job.WOODCUTTER);
 		}
 		else
@@ -177,7 +170,7 @@ public class Human extends Animal
 		if(this.distance(this.getHut()) < 10)
 		{
 			this.dropResources();
-			this.setJob(this.job);
+			this.setJob(this.getHut().giveJob(this));
 		}
 		this.setHeading(this.towards(this.getHut().x, this.getHut().y));
 		this.fd();
@@ -241,9 +234,14 @@ public class Human extends Animal
 		return this.hut;
 	}
 	
-	protected void setHut(Hut hut)
+	public void setHut(Hut hut)
 	{
 		this.hut = hut;
+	}
+	
+	public float getExp(Job job)
+	{
+		return this.job_exp[job.ordinal()];
 	}
 	
 	protected void incrExp(Job job)
@@ -265,11 +263,16 @@ public class Human extends Animal
 	public void die()
 	{
 		// humans never die
-		/*allHumans.remove(this);
+		allHumans.remove(this);
 		if(this.hut != null)
 			this.hut.removeAnInhabitant(this);
 		
-		super.die();*/
+		super.die();
+	}
+	
+	@Override
+	protected void reproduce()
+	{
 	}
 	
 	//******************************************************************
@@ -287,11 +290,6 @@ public class Human extends Animal
 	
 	protected float job_exp[] = new float[Job.values().length];
 	protected float job_exp_step[] = new float[Job.values().length];
-
-
-	protected float hunter_level = 1;	
-	protected float gatherer_level = 1;	
-	protected float woodcutter_level = 1;
 	
 	//******************************************************************
 	//	PRIVATE CLASS

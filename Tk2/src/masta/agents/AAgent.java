@@ -100,8 +100,8 @@ public abstract class AAgent extends Turtle{
 		Image img = this.getImage();
 		if(img != null)
 		{
-			int width = img.getWidth(null)*cell_size;
-			int height = img.getHeight(null)*cell_size;
+			int width = img.getWidth(null)*cell_size / 4;
+			int height = img.getHeight(null)*cell_size / 4;
 			int posX = x - (width - cell_size)/2;
 			int posY = y - (height - cell_size)/2;
 			g.drawImage(img, posX, posY, width, height, null);
@@ -109,7 +109,7 @@ public abstract class AAgent extends Turtle{
 		else
 		{
 			g.setColor(this.getColor());
-			g.fillRect(x,y,cell_size*this.getWidth(),cell_size*this.getHeight());
+			g.fillRect(x,y,cell_size*this.getWidth() / 4,cell_size*this.getHeight() / 4);
 		}
 	}
 	

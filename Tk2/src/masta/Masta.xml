@@ -2,7 +2,7 @@
 	<!--Multi Agent System for Task allocation-->
 	
 <simulation name="MASTA">
-	<environment class="masta.world.World" width="1200" height="600" torusMode="false"/>
+	<environment class="masta.world.World" width="600" height="300" torusMode="false"/>
 	
 	<pheromone name="temperature" diffusion="0.25" evaporation="0.02" />
 	<pheromone name="sea"/>
@@ -12,7 +12,7 @@
 	
 	
 	<turtle class="masta.agents.things.Hut" 			number="10" />	
-	<turtle class="masta.agents.animals.sheep.Sheep" 	number="200" />
+	<turtle class="masta.agents.animals.sheep.Sheep" 	number="100" />
 	
 	<observer class="masta.world.WorldView" />
 	<observer class="masta.world.WorldCtrl" />

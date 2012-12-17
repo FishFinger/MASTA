@@ -47,7 +47,7 @@ public class Sheep extends Animal
 		this.body = new SheepBody(this, 100, 5);
 		
 		this.getBody().setVision(5f);
-		this.fertility_rate = 0.0005f;
+		this.fertility_rate = 0.0008f;
 		
 		if(sheep_img == null)
 			try {
