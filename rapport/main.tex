@@ -1,0 +1,30 @@
+\def\lang{french}
+
+\documentclass[a4paper,french,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[\lang]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[\lang]{varioref}
+
+% math
+%\usepackage{amsmath}
+%\usepackage{asmsymb}
+
+% algo
+\usepackage[ruled,linesnumbered,vlined]{algorithm2e}
+
+
+\include{def}
+
+\addtolength{\oddsidemargin}{-2,5cm}
+\addtolength{\textwidth}{5cm}
+\addtolength{\topmargin}{-2,5cm}
+\addtolength{\textheight}{4cm}
+
+
+\begin{document}
+\maketitle
+\input{content}
+\end{document}
