@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<!--Multi Agent System for Task allocation-->
+	
+<simulation name="MASTA">
+	<environment class="masta.world.World" width="700" height="400" torusMode="true"/>
+	
+	<pheromone name="temperature" diffusion="0.25" evaporation="0.02" />
+	<pheromone name="sea"/>
+	<pheromone name="grass"/>
+	<pheromone name="berry" />
+	<pheromone name="wood" />
+	
+	
+	<turtle class="masta.agents.things.Hut" 			number="12" />	
+	<turtle class="masta.agents.animals.sheep.Sheep" 	number="130" />
+	
+	<observer class="masta.world.WorldView" />
+	<observer class="masta.world.WorldCtrl" />
+
+	<observer class="masta.charts.HutResourceChart" />
+	<observer class="masta.charts.EnergieChart" role="Sheep" />
+	<observer class="masta.charts.EnergieChart" role="Human" />
+	
+	<observer class="edu.turtlekit2.tools.chart.LineCharter" role="Sheep,Human"/>
+		
+	
+</simulation>
