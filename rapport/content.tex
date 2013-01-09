@@ -1,5 +1,4 @@
 
-
 Le programme MASTA est une simulation multi-agents d'allocation de
 tâches pour la récolte de ressources. 
 
@@ -8,7 +7,7 @@ tâches pour la récolte de ressources.
 Le monde de Masta est composé d'agents humains qui doivent récolter
 différentes ressources pour le compte de l'agent hutte à laquelle ils sont
 rattachés. Ces ressources sont de trois types : viande, baies,
-bois. Les baies et le bois sont représenter par une variable
+bois. Les baies et le bois sont représentés par une variable
 de \og{}patch\fg{}, la viande peut être récupérée sur un agent mouton mort. 
 
 
@@ -17,10 +16,11 @@ de \og{}patch\fg{}, la viande peut être récupérée sur un agent mouton mort.
 Les agents humains sont tous rattachés à une hutte qui s'occupe de
 leur allouer leurs tâches. Leur couleur représente leur tâches actuel,
 rouge pour chasseur, vert pour cueilleur, jaune pour bûcheron. Un
-humain effectue sa tâches jusqu'à avoir récolter une quantité préfixé
+humain effectue sa tâches jusqu'à avoir récolté une quantité préfixée
 de ressource puis, une fois cette quantité atteinte, il rentre à sa
-hutte où il se verra allouer une nouvelle tâches. {\bf Plus un
-humain effectue une tâche plus il est performant dans celle-ci}.
+hutte où il se verra alloué une nouvelle tâches. {\bf Plus un
+humain effectue une tâche plus il est performant dans la réalisation de
+celle-ci}.
 
 \section{Les huttes}
 
@@ -28,7 +28,7 @@ Les huttes jouent un rôle crucial dans Masta. Elles organisent la
 répartition des tâches entre les agents humains. Le but pour
 chaque hutte est de récolter le maximum de ressources possibles de
 façon la mieux répartie possible. Trois types de huttes ont été
-implémenter, représentant chacun un type d'allocation différents.
+implémentés, représentant chacun un type d'allocation différent.
 
 \begin{minipage}[H]{0.1\linewidth}
   \begin{figure}[H]
@@ -63,7 +63,7 @@ implémenter, représentant chacun un type d'allocation différents.
 \end{minipage}
 \begin{minipage}[H]{0.9\linewidth}
   Les huttes de types \og{}affinity\fg{} allouent les tâches en
-  fonction du niveau des ressources mais aussi en fonction des
+  fonction du niveau de chaque ressource mais aussi en fonction des
   spécificités des agents. Ainsi un agent doué en chasse à plus de
   probabilité de se voir allouer cette tâche.
 \end{minipage}
@@ -95,7 +95,7 @@ implémenter, représentant chacun un type d'allocation différents.
   \begin{figure}[H]
     \begin{center}
       \includegraphics[width=0.6\textwidth]{./img/graph_ressources}
-      \caption{Quantité de ressources récoltés par type de huttes en
+      \caption{Quantité de ressources récoltées par type de huttes en
     fonction du temps} 
       \label{fig:resultat}
     \end{center}
@@ -104,13 +104,13 @@ implémenter, représentant chacun un type d'allocation différents.
   Le graphique de la figure \vref{fig:resultat} représente la somme des quantités
   de la ressource de niveau minimal de chaque hutte pour chaque type
   de hutte en fonction du temps. Nous pouvons constater que les huttes
-  de types \og{}affinity\fg{} (ici en vert) s'en sorte mieux, à long
+  de types \og{}affinity\fg{} (ici en vert) s'en sortent mieux, à long
   terme, que leurs homologues \og{}static\fg{} et \og{}min
   before\fg{}.
 
 \section{Installation}
 
-Cette application utilise TurtleKit et a était testé avec TurtleKit
+Cette application utilise TurtleKit et a été dans sa version
 2.4.8 actuellement disponible à l'adresse suivante :
 http://gforge-lirmm.lirmm.fr/gf/download/frsrelease/138/1158/Tk2.4.8.Eclipse.zip
 
